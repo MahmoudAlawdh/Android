@@ -31,8 +31,9 @@
         <activity android:name=".DonationProcessActivity" />
         <activity android:name=".Can_I_Donate" />
         <activity android:name=".BeforeDonation" />
-        <activity android:name=".AfterDonation"></activity>
-        <activity android:name=".Register2Activity"></activity>
+        <activity android:name=".AfterDonation" />
+        <activity android:name=".Register2Activity" />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>
