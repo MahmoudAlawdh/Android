@@ -7,6 +7,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -31,20 +42,34 @@ public class MyDonations extends Fragment {
         ListView lv = (ListView) v.findViewById(R.id.ListView);
 
         final ArrayList<MyAppointmentModel> model= new ArrayList<>();
+        final MyAppointmentAdapter myv = new MyAppointmentAdapter(model,getActivity());
+        String url="http://34.196.107.188:8080/mHealthWS/ws/donationrecord";
 
-        model.add(new MyAppointmentModel(1,1,"2017/9/15","manayr hussain","O-"));
-        model.add(new MyAppointmentModel(1,1,"2017/10/5","mariam jassim","AB-"));
-        model.add(new MyAppointmentModel(1,1,"2017/11/5","mohammad","O+"));
-        model.add(new MyAppointmentModel(1,1,"2017/2/13","yahya","O-"));
-        model.add(new MyAppointmentModel(1,1,"2017/4/25","essa jawad","AB-"));
-        model.add(new MyAppointmentModel(1,1,"2017/2/17","Rashid habeb","B+"));
+        final RequestQueue queue= Connection.getInstance().getRequestQueue(getContext());
 
+        final StringRequest stringRequest=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONArray a = new JSONArray(response);
+                    for(int i = 0 ; i < a.length() ; i++){
+                        JSONObject o = a.getJSONObject(i);
+                        model.add(new MyAppointmentModel(o.getInt("donationId"),o.getInt("donorCivilid"),o.getString("ddate"),o.getString("donationdestination"),o.getString("dnbloodtype")));
+                        myv.notifyDataSetChanged();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
 
+            }
+        });
+        queue.add(stringRequest);
 
-
-
-        MyAppointmentAdapter myv = new MyAppointmentAdapter(model,getActivity());
 
 
         lv.setAdapter(myv);

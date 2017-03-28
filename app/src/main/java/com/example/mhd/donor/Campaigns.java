@@ -10,6 +10,16 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 
@@ -33,20 +43,39 @@ public class Campaigns extends Fragment {
         ListView lv = (ListView) v.findViewById(R.id.CampaingListview);
 
         final ArrayList<CampaignModel> model= new ArrayList<>();
+        final CampaignAdapter myv = new CampaignAdapter(model,getActivity());
+        lv.setAdapter(myv);
         //   llate = 29.3640416;
         // llong = 47.9814006;
-        model.add(new CampaignModel(1,"KOC","2017/1/1","2017/1/3","Marina","29.3640416","47.9814006","O+"));
-        model.add(new CampaignModel(1,"Zain","2017/1/5","2017/1/9","Hawali","29.3640416","47.9814006","O-"));
-        model.add(new CampaignModel(1,"National Day","2017/2/1","2017/2/9","Jabrya","29.3640416","47.9814006","A+"));
-        model.add(new CampaignModel(1,"blood type AB","2017/2/13","2017/2/9","Jabrya","29.3640416","47.9814006","AB-"));
-        model.add(new CampaignModel(1,"Emergancy","2017/11/11","2017/11/15","Jabrya","29.3640416","47.9814006","B-"));
-        model.add(new CampaignModel(1,"Wataniya","2017/12/1","2017/12/6","avnyoz","29.3640416","47.9814006","A-"));
-        model.add(new CampaignModel(1,"Viva","2017/12/7","2017/12/25","360","29.3640416","47.9814006","AB+"));
+        String url="http://34.196.107.188:8080/mHealthWS/ws/newcallfordonation";
 
-        CampaignAdapter myv = new CampaignAdapter(model,getActivity());
+        final RequestQueue queue= Connection.getInstance().getRequestQueue(getContext());
+
+        final StringRequest stringRequest=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONArray a = new JSONArray(response);
+                    for(int i = 0 ; i < a.length() ; i++){
+                        JSONObject o = a.getJSONObject(i);
+                        model.add(new CampaignModel(o.getInt("CFDId"),o.getString("name"),o.getString("startdate"),o.getString("enddate"),o.getString("locationName"),
+                                o.getString("LLat"),o.getString("LLong"),o.getString("bloodTypes")));
+                        myv.notifyDataSetChanged();
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+        queue.add(stringRequest);
 
 
-        lv.setAdapter(myv);
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

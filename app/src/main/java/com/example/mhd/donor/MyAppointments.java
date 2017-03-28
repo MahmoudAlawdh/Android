@@ -9,6 +9,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 
@@ -33,29 +44,40 @@ public class MyAppointments extends Fragment {
         ListView lv = (ListView) v.findViewById(R.id.AppointmentListview);
 
         final ArrayList<MyAppointmentModel> model= new ArrayList<>();
+        final MyAppointmentAdapter myv = new MyAppointmentAdapter(model,getActivity());
+        String url="http://34.196.107.188:8080/mHealthWS/ws/donationrecord";
 
-        model.add(new MyAppointmentModel(1,1,"2017/3/5","Ahmad abbas","O+"));
-        model.add(new MyAppointmentModel(1,1,"2017/4/9","Mustafa khalid","A-"));
-        model.add(new MyAppointmentModel(1,1,"2017/5/8","abbas soad","AB+"));
-        model.add(new MyAppointmentModel(1,1,"2019/1/9","Aziz yosif","A+"));
-        model.add(new MyAppointmentModel(1,1,"2017/6/5","fahad mohammad","B-"));
-        model.add(new MyAppointmentModel(1,1,"2017/7/15","fatma kasim","B+"));
-        model.add(new MyAppointmentModel(1,1,"2017/9/15","manayr hussain","O-"));
-        model.add(new MyAppointmentModel(1,1,"2017/10/5","mariam jassim","AB-"));
-        model.add(new MyAppointmentModel(1,1,"2017/11/5","mohammad","O+"));
-        model.add(new MyAppointmentModel(1,1,"2017/2/13","yahya","O-"));
-        model.add(new MyAppointmentModel(1,1,"2017/4/25","essa jawad","AB-"));
-        model.add(new MyAppointmentModel(1,1,"2017/2/17","Rashid habeb","B+"));
-        model.add(new MyAppointmentModel(1,1,"2017/5/16","Abdurahmman mohammad","B+"));
-        model.add(new MyAppointmentModel(1,1,"2017/6/19","walled khalid","A+"));
-        model.add(new MyAppointmentModel(1,1,"2017/7/21","jax jonson","AB-"));
-        model.add(new MyAppointmentModel(1,1,"2017/9/27","alex bin","O-"));
+        final RequestQueue queue= Connection.getInstance().getRequestQueue(getContext());
+
+        final StringRequest stringRequest=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONArray a = new JSONArray(response);
+                    for(int i = 0 ; i < a.length() ; i++){
+                        JSONObject o = a.getJSONObject(i);
+                        model.add(new MyAppointmentModel(o.getInt("donationId"),o.getInt("donorCivilid"),o.getString("ddate"),o.getString("donationdestination"),o.getString("dnbloodtype")));
+                        myv.notifyDataSetChanged();
+
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+        queue.add(stringRequest);
 
 
 
 
 
-        MyAppointmentAdapter myv = new MyAppointmentAdapter(model,getActivity());
+
 
 
         lv.setAdapter(myv);
