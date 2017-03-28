@@ -1,0 +1,7 @@
+#Tue Mar 28 17:26:07 AST 2017
+base.0=/home/mhd/Desktop/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_3838bf2780cfd551b190a7e6b0ef3e13c7da2e5d
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/home/mhd/Desktop/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_f08968112efb0d9e0649161fece13483e1c64d85/classes.dex
+base.1=/home/mhd/Desktop/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_f08968112efb0d9e0649161fece13483e1c64d85
+file.0=/home/mhd/Desktop/Android/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_3838bf2780cfd551b190a7e6b0ef3e13c7da2e5d/classes.dex

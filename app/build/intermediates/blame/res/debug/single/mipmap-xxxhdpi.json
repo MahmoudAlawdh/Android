@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/donor.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxxhdpi/donor.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/logodonor.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxxhdpi/logodonor.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/d.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxxhdpi/d.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/ic_launcher_round.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/drop.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxxhdpi/drop.png"
+    }
+]

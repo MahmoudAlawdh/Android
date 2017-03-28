@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@mipmap/map" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imageView5"
+        android:layout_toRightOf="@+id/imageView5"
+        android:layout_marginLeft="5dp"
+        android:text="Campaign" />
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_toEndOf="@+id/imageView5"
+        android:layout_toRightOf="@+id/imageView5"
+        android:text="ABC Campaign"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/md_black_1000"
+        android:layout_marginLeft="8dp"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView5"
+        android:layout_marginLeft="10dp"
+
+        android:layout_marginTop="10dp"
+        app:srcCompat="@mipmap/calendar" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView7"
+        android:layout_toEndOf="@+id/imageView7"
+        android:layout_toRightOf="@+id/imageView7"
+        android:layout_marginLeft="5dp"
+        android:textSize="11sp"
+        android:text="From:"
+        />
+
+    <TextView
+        android:id="@+id/StartDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Feb 22, 2017"
+        android:textColor="@color/md_black_1000"
+        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/imageView7"
+        android:layout_alignLeft="@+id/imageView7"
+        android:layout_alignStart="@+id/imageView7" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignTop="@+id/textView16"
+        android:layout_marginLeft="82dp"
+        android:layout_marginStart="82dp"
+        android:layout_toEndOf="@+id/Name"
+        android:layout_toRightOf="@+id/Name"
+        app:srcCompat="@mipmap/calendar" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView9"
+        android:layout_toEndOf="@+id/imageView9"
+        android:layout_toRightOf="@+id/imageView9"
+        android:text="To:"
+        android:textSize="11sp"
+        android:layout_marginLeft="5dp"
+        />
+
+    <TextView
+        android:id="@+id/EndDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView18"
+        android:layout_alignStart="@+id/textView18"
+        android:layout_alignTop="@+id/StartDate"
+        android:text="Feb 25, 2017"
+        android:textColor="@color/md_black_1000"
+        android:textSize="16sp" />
+</RelativeLayout>

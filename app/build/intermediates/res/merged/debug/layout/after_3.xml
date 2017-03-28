@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12- As part of the blood bank responsibilities is to ensure the safety and efficiency of your
+          donation, please contact Central Blood Bank if:
+You get bruising larger than 5 cm in diameter, redness, swelling or pain in the vein puncture site.
+Tingling in your fingers or arms.
+You have an injury or a complication related to your donation.
+You have fever or feeling unwell within two days of your donation.
+You have any doubt about your donation or if you remember something that may affect the safety of blood you donated.
+
+YOUR HONESTY AND CONCERN ARE THE GREATEST PROTECTION TO OUR BLOOD SUPPLY THAT YOU CAN OFFER.
+
+EVERY TIME YOU DONATE, YOU ARE GIVING ANOTHER PERSON A CHANCE TO LIVE.
+THE ONLY SOURCE OF SAFE BLOOD IS A HEALTHY VOLUNTEER DONOR.
+PLEASE HELP BY BEING A REGULAR BLOOD DONOR.
+
+Blood Bank Locations:
+Central Blood Bank ( Jabriya )
+Blood bank branches:
+Adan Hospital Blood Bank branch
+Jahra Hospital Blood Bank branch
+National Guard Blood Bank branch
+Asima Blood Bank branch
+"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="31dp" />
+</RelativeLayout>

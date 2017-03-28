@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mhd.donor.LoginActivity">
+<android.support.design.widget.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/textInputLayout">
+
+
+</android.support.design.widget.TextInputLayout>
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:layout_below="@+id/imageView4"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/Email"
+        android:layout_alignStart="@+id/Email" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="MHEALTH"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:layout_marginTop="21dp"
+        android:layout_below="@+id/textInputLayout"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/Login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log in "
+        android:layout_below="@+id/Forget_password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp" />
+
+    <Button
+        android:id="@+id/Forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="62dp"
+        android:layout_marginStart="62dp"
+        android:background="@color/material_drawer_background"
+        android:text="Forgot your password? "
+        android:textSize="8sp"
+        android:layout_below="@+id/Password"
+        android:layout_alignLeft="@+id/Login"
+        android:layout_alignStart="@+id/Login" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/donor"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Don't have an account ? "
+        android:layout_below="@+id/Login"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/Sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/Login"
+        android:layout_alignRight="@+id/Login"
+        android:layout_below="@+id/textView9"
+        android:layout_marginTop="14dp"
+        android:text="Sign up " />
+
+</RelativeLayout>

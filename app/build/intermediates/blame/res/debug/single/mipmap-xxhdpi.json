@@ -1,0 +1,78 @@
+[
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher_round.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/calendar.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/calendar.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/aa.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/aa.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/a.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/a.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/bb.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/bb.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/oo.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/oo.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/abb.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/abb.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/nv_header.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/nv_header.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/headerbackground.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/headerbackground.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/hb.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/hb.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ab.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/ab.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ddd.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/ddd.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/navi.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/navi.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/o.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/o.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/person.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/person.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/blood.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/blood.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/b.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/b.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/map.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xxhdpi/map.png"
+    }
+]

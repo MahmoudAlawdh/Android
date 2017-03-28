@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/home/mhd/.android/build-cache/0aded2c8b1d226a8717348f86d503f1d671ca0a7/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/color-v23/design_tint_password_toggle.xml",
+        "source": "/home/mhd/.android/build-cache/5c5324750a5d1b7a101d516914ed4200a10c1f5f/output/res/color-v23/design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/home/mhd/.android/build-cache/0aded2c8b1d226a8717348f86d503f1d671ca0a7/output/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/home/mhd/.android/build-cache/0aded2c8b1d226a8717348f86d503f1d671ca0a7/output/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/home/mhd/.android/build-cache/0aded2c8b1d226a8717348f86d503f1d671ca0a7/output/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/home/mhd/.android/build-cache/0aded2c8b1d226a8717348f86d503f1d671ca0a7/output/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/home/mhd/.android/build-cache/0aded2c8b1d226a8717348f86d503f1d671ca0a7/output/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/home/mhd/.android/build-cache/0aded2c8b1d226a8717348f86d503f1d671ca0a7/output/res/color-v23/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/home/mhd/.android/build-cache/0aded2c8b1d226a8717348f86d503f1d671ca0a7/output/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/home/mhd/.android/build-cache/0aded2c8b1d226a8717348f86d503f1d671ca0a7/output/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/home/mhd/.android/build-cache/0aded2c8b1d226a8717348f86d503f1d671ca0a7/output/res/color-v23/abc_btn_colored_text_material.xml"
+    }
+]

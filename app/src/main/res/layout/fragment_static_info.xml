@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.mhd.donor.StaticInfoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="46dp"
+        android:text="Basic Information"
+        android:textAlignment="center"
+        android:textColor="@color/md_black_1000"
+        android:textSize="14pt" />
+
+    <Button
+        android:id="@+id/donationProcess"
+
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="26dp"
+        android:background="@drawable/button_shap"
+        android:drawableLeft="@mipmap/processdonation"
+        android:paddingLeft="35dp"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="Donation Process"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/CanI"
+        android:layout_alignStart="@+id/CanI" />
+
+    <Button
+        android:id="@+id/CanI"
+        android:paddingLeft="35dp"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="41dp"
+        android:background="@drawable/button_shap"
+        android:drawableLeft="@mipmap/donaaa"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="Can I Donate"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        android:layout_below="@+id/donationProcess"
+        android:layout_alignLeft="@+id/BeforeDonation"
+        android:layout_alignStart="@+id/BeforeDonation" />
+
+    <Button
+        android:id="@+id/BeforeDonation"
+        android:paddingLeft="35dp"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/button_shap"
+        android:drawableLeft="@mipmap/befor"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="Before Donation"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        android:layout_below="@+id/CanI"
+        android:layout_alignLeft="@+id/AfterDonation"
+        android:layout_alignStart="@+id/AfterDonation"
+
+
+        />
+
+    <Button
+        android:id="@+id/AfterDonation"
+        android:paddingLeft="35dp"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="41dp"
+        android:background="@drawable/button_shap"
+        android:drawableLeft="@mipmap/after"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:text="After Donation"
+        android:textColor="#FFFFFF"
+        android:textSize="23sp"
+        android:layout_below="@+id/BeforeDonation"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

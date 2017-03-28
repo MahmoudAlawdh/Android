@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/blooddo.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xhdpi/blooddo.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/global.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xhdpi/global.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/global_1.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xhdpi/global_1.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/processdonation.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xhdpi/processdonation.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/after.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xhdpi/after.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/alarm.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xhdpi/alarm.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/settings_1.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xhdpi/settings_1.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/settings.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xhdpi/settings.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/translator.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xhdpi/translator.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/donaaa.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xhdpi/donaaa.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/ic_launcher_round.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/mipmap-xhdpi/befor.png",
+        "source": "/home/mhd/Desktop/Android/app/src/main/res/mipmap-xhdpi/befor.png"
+    }
+]

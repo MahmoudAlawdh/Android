@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.aConstraintLayoutndroid.com/apk/res-auto"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mhd.donor.RegisterActivity">
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="73dp"
+        android:fontFamily="serif"
+        android:text="Sign up "
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/editText3"
+        android:layout_alignStart="@+id/editText3" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:inputType="textEmailAddress"
+        android:text="Enter your email "
+        android:textColor="@color/common_google_signin_btn_text_dark_disabled"
+        android:layout_below="@+id/textView14"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText3"
+        android:layout_alignStart="@+id/editText3"
+        android:layout_below="@+id/editText3"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="Password"
+        android:textColor="@color/common_google_signin_btn_text_dark_disabled"
+        android:layout_alignRight="@+id/editText3"
+        android:layout_alignEnd="@+id/editText3" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="Choose Your Blood Type:"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textStyle="bold"
+        android:layout_below="@+id/editText4"
+        android:layout_alignLeft="@+id/textView14"
+        android:layout_alignStart="@+id/textView14" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        android:layout_below="@+id/imageButton8"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="@dimen/material_drawer_item_primary_icon_padding_right"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText4"
+        android:layout_alignStart="@+id/editText4"
+        android:layout_below="@+id/textView15"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@color/common_google_signin_btn_text_dark_default"
+        app2:srcCompat="@mipmap/abb" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="@dimen/material_drawer_item_primary_icon_padding_right"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app2:srcCompat="@mipmap/a"
+        android:layout_below="@+id/textView15"
+        android:layout_alignRight="@+id/textView14"
+        android:layout_alignEnd="@+id/textView14" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="@dimen/material_drawer_item_primary_icon_padding_right"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app2:srcCompat="@mipmap/aa"
+        android:layout_below="@+id/textView15"
+        android:layout_alignRight="@+id/textView15"
+        android:layout_alignEnd="@+id/textView15" />
+
+    <ImageButton
+        android:id="@+id/imageButton6"
+        android:layout_width="@dimen/material_drawer_item_primary_icon_padding_right"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app2:srcCompat="@mipmap/b"
+        android:layout_below="@+id/imageButton7"
+        android:layout_alignLeft="@+id/imageButton7"
+        android:layout_alignStart="@+id/imageButton7" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="@dimen/material_drawer_item_primary_icon_padding_right"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editText4"
+        android:layout_alignRight="@+id/editText4"
+        android:layout_below="@+id/textView15"
+        android:background="@android:color/transparent"
+        app2:srcCompat="@mipmap/bb" />
+
+    <ImageButton
+        android:id="@+id/imageButton8"
+        android:layout_width="@dimen/material_drawer_item_primary_icon_padding_right"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app2:srcCompat="@mipmap/o"
+        android:layout_below="@+id/imageButton2"
+        android:layout_alignLeft="@+id/imageButton2"
+        android:layout_alignStart="@+id/imageButton2" />
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="@dimen/material_drawer_item_primary_icon_padding_right"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app2:srcCompat="@mipmap/oo"
+        android:layout_below="@+id/imageButton5"
+        android:layout_alignLeft="@+id/imageButton5"
+        android:layout_alignStart="@+id/imageButton5" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app2:srcCompat="@mipmap/ab"
+        android:layout_below="@+id/imageButton2"
+        android:layout_toRightOf="@+id/imageButton8"
+        android:layout_toEndOf="@+id/imageButton8" />
+
+</RelativeLayout>

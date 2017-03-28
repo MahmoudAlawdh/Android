@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/home/mhd/.android/build-cache/5c5324750a5d1b7a101d516914ed4200a10c1f5f/output/res/anim-v21/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/home/mhd/Desktop/Android/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/home/mhd/.android/build-cache/5c5324750a5d1b7a101d516914ed4200a10c1f5f/output/res/anim-v21/design_bottom_sheet_slide_in.xml"
+    }
+]

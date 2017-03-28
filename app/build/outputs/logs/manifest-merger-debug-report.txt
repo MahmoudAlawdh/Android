@@ -1,0 +1,209 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:2:1-38:12
+	package
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:3:5-36
+		INJECTED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:5:22-76
+application
+ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:7:5-36:19
+MERGED from [com.android.support:preference-v7:25.3.0] /home/mhd/.android/build-cache/7f37a8a771c19e814b082c7448574b3711729f7d/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/mhd/.android/build-cache/eca3abea0375100bbf68493158861a8c1cb09b37/output/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:design:25.3.0] /home/mhd/.android/build-cache/5c5324750a5d1b7a101d516914ed4200a10c1f5f/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.0] /home/mhd/.android/build-cache/0aded2c8b1d226a8717348f86d503f1d671ca0a7/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] /home/mhd/.android/build-cache/4f0e7d5bf79690cedb8d5220b439ff81d3d31bc5/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.0] /home/mhd/.android/build-cache/73ec580aed21d922a2cec9314139c7c7bf6ddf26/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:25.3.0] /home/mhd/.android/build-cache/f51a589000a9cd7588119842969f64dba132c832/output/AndroidManifest.xml:26:5-20
+MERGED from [com.mikepenz:google-material-typeface:3.0.1.0.original] /home/mhd/.android/build-cache/051cb1c70e555030bce80740ed258c0f9ebc0b4f/output/AndroidManifest.xml:27:5-20
+MERGED from [com.mikepenz:material-design-iconic-typeface:2.2.0.2] /home/mhd/.android/build-cache/3fbbb7eaefa0f6994a91a0220612975b4b87a18b/output/AndroidManifest.xml:27:5-20
+MERGED from [com.mikepenz:octicons-typeface:3.2.0.2] /home/mhd/.android/build-cache/9dd6091f90158997594051b716a76fd27e2ccaf5/output/AndroidManifest.xml:27:5-20
+MERGED from [com.mikepenz:meteocons-typeface:1.1.0.2] /home/mhd/.android/build-cache/6c5f5eec8e8ebd8638a135e10849aa5993d9c860/output/AndroidManifest.xml:27:5-20
+MERGED from [com.mikepenz:community-material-typeface:1.8.36.1] /home/mhd/.android/build-cache/02a3efd72cb577272f14802fba6ca31c386d006f/output/AndroidManifest.xml:28:5-20
+MERGED from [com.mikepenz:weather-icons-typeface:2.0.10.2] /home/mhd/.android/build-cache/5682df54ed0a185383a28b09d202aebb0aa21f25/output/AndroidManifest.xml:27:5-20
+MERGED from [com.mikepenz:typeicons-typeface:2.0.7.2] /home/mhd/.android/build-cache/26eb1280545be19ea8945c205e62790915ee10bc/output/AndroidManifest.xml:27:5-20
+MERGED from [com.mikepenz:entypo-typeface:1.0.0.2] /home/mhd/.android/build-cache/a7e9086cf46eb77ce5e56b03ffb1ad245ea99a87/output/AndroidManifest.xml:27:5-20
+MERGED from [com.mikepenz:devicon-typeface:2.0.0.2] /home/mhd/.android/build-cache/a0a7860c32ad8e44eee20a48a34f1aad74016c3d/output/AndroidManifest.xml:27:5-20
+MERGED from [com.mikepenz:foundation-icons-typeface:3.0.0.2] /home/mhd/.android/build-cache/3f4251c24f68539f5841401af5564d0f38c82ac3/output/AndroidManifest.xml:27:5-20
+MERGED from [com.mikepenz:ionicons-typeface:2.0.1.2] /home/mhd/.android/build-cache/555932ebdafb789bc9cbcc8755bd9c586d26188c/output/AndroidManifest.xml:27:5-20
+MERGED from [com.google.android.gms:play-services-maps:9.4.0] /home/mhd/.android/build-cache/e2b659c73c0831527f242c9427b8334c93f99a40/output/AndroidManifest.xml:27:5-20
+MERGED from [com.google.android.gms:play-services-base:9.4.0] /home/mhd/.android/build-cache/56ac0d7b26c1eaf5f37f67343219507580fb1950/output/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /home/mhd/.android/build-cache/60884f5fd67061261aecdd8a75325fdb30263f6b/output/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:9.4.0] /home/mhd/.android/build-cache/b8dcd3e6889c8b72bb1aadd074251f701db3bc6e/output/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:25.3.0] /home/mhd/.android/build-cache/992e664af2db861adaec86434ed7c98ff74ab742/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.0] /home/mhd/.android/build-cache/53b3c94af384788a6c30b14dd08d64dd86c157da/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.0] /home/mhd/.android/build-cache/d6aba394531e14c44814e7b92e7fbfde1ddec38c/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.0] /home/mhd/.android/build-cache/19883515b157bdbe50f32db277d61b968b8b5a2a/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.0] /home/mhd/.android/build-cache/e600ef89a25f72d7ee803f0f96611353049dc219/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.0] /home/mhd/.android/build-cache/789e00a21ac8a2bf3e17dbd40acc2e929358127a/output/AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:10:9-41
+	android:supportsRtl
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:12:9-35
+	android:roundIcon
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:11:9-54
+	android:allowBackup
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:8:9-35
+	android:icon
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:9:9-43
+	android:theme
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:13:9-40
+meta-data#com.google.android.geo.API_KEY
+ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:14:9-16:55
+	android:value
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:16:13-52
+	android:name
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:15:13-58
+activity#com.example.mhd.donor.MainActivity
+ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:18:9-24:20
+	android:name
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:18:19-47
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:19:13-23:29
+action#android.intent.action.MAIN
+ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:20:17-69
+	android:name
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:20:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:22:17-77
+	android:name
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:22:27-74
+activity#com.example.mhd.donor.HomeActivity
+ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:25:9-50
+	android:name
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:25:19-47
+activity#com.example.mhd.donor.LoginActivity
+ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:26:9-51
+	android:name
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:26:19-48
+activity#com.example.mhd.donor.RegisterActivity
+ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:27:9-54
+	android:name
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:27:19-51
+activity#com.example.mhd.donor.Campaign_Details
+ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:28:9-30:35
+	android:label
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:30:13-32
+	android:name
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:29:13-45
+activity#com.example.mhd.donor.DonationProcessActivity
+ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:31:9-61
+	android:name
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:31:19-58
+activity#com.example.mhd.donor.Can_I_Donate
+ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:32:9-50
+	android:name
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:32:19-47
+activity#com.example.mhd.donor.BeforeDonation
+ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:33:9-52
+	android:name
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:33:19-49
+activity#com.example.mhd.donor.AfterDonation
+ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:34:9-60
+	android:name
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:34:19-48
+activity#com.example.mhd.donor.Register2Activity
+ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:35:9-64
+	android:name
+		ADDED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml:35:19-52
+uses-sdk
+INJECTED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.mikepenz:materialdrawer:5.8.2] /home/mhd/.android/build-cache/314d203929d90050e68ffbc7b7784538e7054375/output/AndroidManifest.xml:8:5-10:41
+MERGED from [com.mikepenz:materialize:1.0.1] /home/mhd/.android/build-cache/48d5d3b72c7b57906a4d78bfdf13fe1788e7a523/output/AndroidManifest.xml:8:5-10:41
+MERGED from [com.mikepenz:fastadapter:2.1.0] /home/mhd/.android/build-cache/6087a738f63e7608f6ac3b978ab1e28b6f60f2c9/output/AndroidManifest.xml:8:5-10:41
+MERGED from [com.android.support:preference-v7:25.3.0] /home/mhd/.android/build-cache/7f37a8a771c19e814b082c7448574b3711729f7d/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/mhd/.android/build-cache/eca3abea0375100bbf68493158861a8c1cb09b37/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:design:25.3.0] /home/mhd/.android/build-cache/5c5324750a5d1b7a101d516914ed4200a10c1f5f/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:25.3.0] /home/mhd/.android/build-cache/0aded2c8b1d226a8717348f86d503f1d671ca0a7/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] /home/mhd/.android/build-cache/4f0e7d5bf79690cedb8d5220b439ff81d3d31bc5/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.0] /home/mhd/.android/build-cache/73ec580aed21d922a2cec9314139c7c7bf6ddf26/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.0] /home/mhd/.android/build-cache/70768fa1dcecc10f764825d4cd288caa5522c572/output/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:transition:25.3.0] /home/mhd/.android/build-cache/f51a589000a9cd7588119842969f64dba132c832/output/AndroidManifest.xml:20:5-44
+MERGED from [com.mikepenz:iconics-core:2.8.2] /home/mhd/.android/build-cache/577c43163ce12ee9f4c72888882da25a9d80189b/output/AndroidManifest.xml:8:5-10:41
+MERGED from [com.mikepenz:google-material-typeface:3.0.1.0.original] /home/mhd/.android/build-cache/051cb1c70e555030bce80740ed258c0f9ebc0b4f/output/AndroidManifest.xml:23:5-25:41
+MERGED from [com.mikepenz:material-design-iconic-typeface:2.2.0.2] /home/mhd/.android/build-cache/3fbbb7eaefa0f6994a91a0220612975b4b87a18b/output/AndroidManifest.xml:23:5-25:41
+MERGED from [com.mikepenz:fontawesome-typeface:4.7.0.0] /home/mhd/.android/build-cache/b654b3222f9d2edcbb4c0ecfaca933476c1b7754/output/AndroidManifest.xml:8:5-10:41
+MERGED from [com.mikepenz:octicons-typeface:3.2.0.2] /home/mhd/.android/build-cache/9dd6091f90158997594051b716a76fd27e2ccaf5/output/AndroidManifest.xml:23:5-25:41
+MERGED from [com.mikepenz:meteocons-typeface:1.1.0.2] /home/mhd/.android/build-cache/6c5f5eec8e8ebd8638a135e10849aa5993d9c860/output/AndroidManifest.xml:23:5-25:41
+MERGED from [com.mikepenz:community-material-typeface:1.8.36.1] /home/mhd/.android/build-cache/02a3efd72cb577272f14802fba6ca31c386d006f/output/AndroidManifest.xml:24:5-26:41
+MERGED from [com.mikepenz:weather-icons-typeface:2.0.10.2] /home/mhd/.android/build-cache/5682df54ed0a185383a28b09d202aebb0aa21f25/output/AndroidManifest.xml:23:5-25:41
+MERGED from [com.mikepenz:typeicons-typeface:2.0.7.2] /home/mhd/.android/build-cache/26eb1280545be19ea8945c205e62790915ee10bc/output/AndroidManifest.xml:23:5-25:41
+MERGED from [com.mikepenz:entypo-typeface:1.0.0.2] /home/mhd/.android/build-cache/a7e9086cf46eb77ce5e56b03ffb1ad245ea99a87/output/AndroidManifest.xml:23:5-25:41
+MERGED from [com.mikepenz:devicon-typeface:2.0.0.2] /home/mhd/.android/build-cache/a0a7860c32ad8e44eee20a48a34f1aad74016c3d/output/AndroidManifest.xml:23:5-25:41
+MERGED from [com.mikepenz:foundation-icons-typeface:3.0.0.2] /home/mhd/.android/build-cache/3f4251c24f68539f5841401af5564d0f38c82ac3/output/AndroidManifest.xml:23:5-25:41
+MERGED from [com.mikepenz:ionicons-typeface:2.0.1.2] /home/mhd/.android/build-cache/555932ebdafb789bc9cbcc8755bd9c586d26188c/output/AndroidManifest.xml:23:5-25:41
+MERGED from [com.google.android.gms:play-services-maps:9.4.0] /home/mhd/.android/build-cache/e2b659c73c0831527f242c9427b8334c93f99a40/output/AndroidManifest.xml:26:5-42
+MERGED from [com.google.android.gms:play-services-base:9.4.0] /home/mhd/.android/build-cache/56ac0d7b26c1eaf5f37f67343219507580fb1950/output/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-tasks:9.4.0] /home/mhd/.android/build-cache/60884f5fd67061261aecdd8a75325fdb30263f6b/output/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:9.4.0] /home/mhd/.android/build-cache/b8dcd3e6889c8b72bb1aadd074251f701db3bc6e/output/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:25.3.0] /home/mhd/.android/build-cache/992e664af2db861adaec86434ed7c98ff74ab742/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.0] /home/mhd/.android/build-cache/53b3c94af384788a6c30b14dd08d64dd86c157da/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-media-compat:25.3.0] /home/mhd/.android/build-cache/d6aba394531e14c44814e7b92e7fbfde1ddec38c/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-ui:25.3.0] /home/mhd/.android/build-cache/19883515b157bdbe50f32db277d61b968b8b5a2a/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:25.3.0] /home/mhd/.android/build-cache/e600ef89a25f72d7ee803f0f96611353049dc219/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.0] /home/mhd/.android/build-cache/789e00a21ac8a2bf3e17dbd40acc2e929358127a/output/AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:25.3.0] /home/mhd/.android/build-cache/5c5324750a5d1b7a101d516914ed4200a10c1f5f/output/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/mhd/Desktop/Android/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:preference-v7:25.3.0] /home/mhd/.android/build-cache/7f37a8a771c19e814b082c7448574b3711729f7d/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:design:25.3.0] /home/mhd/.android/build-cache/5c5324750a5d1b7a101d516914ed4200a10c1f5f/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:appcompat-v7:25.3.0] /home/mhd/.android/build-cache/0aded2c8b1d226a8717348f86d503f1d671ca0a7/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.0] /home/mhd/.android/build-cache/4f0e7d5bf79690cedb8d5220b439ff81d3d31bc5/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.0] /home/mhd/.android/build-cache/73ec580aed21d922a2cec9314139c7c7bf6ddf26/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.0] /home/mhd/.android/build-cache/70768fa1dcecc10f764825d4cd288caa5522c572/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:transition:25.3.0] /home/mhd/.android/build-cache/f51a589000a9cd7588119842969f64dba132c832/output/AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.0] /home/mhd/.android/build-cache/992e664af2db861adaec86434ed7c98ff74ab742/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.0] /home/mhd/.android/build-cache/53b3c94af384788a6c30b14dd08d64dd86c157da/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.0] /home/mhd/.android/build-cache/d6aba394531e14c44814e7b92e7fbfde1ddec38c/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.0] /home/mhd/.android/build-cache/19883515b157bdbe50f32db277d61b968b8b5a2a/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.0] /home/mhd/.android/build-cache/e600ef89a25f72d7ee803f0f96611353049dc219/output/AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.0] /home/mhd/.android/build-cache/789e00a21ac8a2bf3e17dbd40acc2e929358127a/output/AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:preference-v7:25.3.0] /home/mhd/.android/build-cache/7f37a8a771c19e814b082c7448574b3711729f7d/output/AndroidManifest.xml:24:9-31
+	android:name
+		ADDED from [com.android.support:preference-v7:25.3.0] /home/mhd/.android/build-cache/7f37a8a771c19e814b082c7448574b3711729f7d/output/AndroidManifest.xml:23:9-47
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:9.4.0] /home/mhd/.android/build-cache/e2b659c73c0831527f242c9427b8334c93f99a40/output/AndroidManifest.xml:20:5-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:9.4.0] /home/mhd/.android/build-cache/e2b659c73c0831527f242c9427b8334c93f99a40/output/AndroidManifest.xml:20:22-76
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.android.gms:play-services-maps:9.4.0] /home/mhd/.android/build-cache/e2b659c73c0831527f242c9427b8334c93f99a40/output/AndroidManifest.xml:21:5-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:9.4.0] /home/mhd/.android/build-cache/e2b659c73c0831527f242c9427b8334c93f99a40/output/AndroidManifest.xml:21:22-64
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:9.4.0] /home/mhd/.android/build-cache/e2b659c73c0831527f242c9427b8334c93f99a40/output/AndroidManifest.xml:22:5-24:33
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:9.4.0] /home/mhd/.android/build-cache/e2b659c73c0831527f242c9427b8334c93f99a40/output/AndroidManifest.xml:23:8-40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:9.4.0] /home/mhd/.android/build-cache/e2b659c73c0831527f242c9427b8334c93f99a40/output/AndroidManifest.xml:24:8-31
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:9.4.0] /home/mhd/.android/build-cache/56ac0d7b26c1eaf5f37f67343219507580fb1950/output/AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:9.4.0] /home/mhd/.android/build-cache/56ac0d7b26c1eaf5f37f67343219507580fb1950/output/AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:9.4.0] /home/mhd/.android/build-cache/56ac0d7b26c1eaf5f37f67343219507580fb1950/output/AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:9.4.0] /home/mhd/.android/build-cache/56ac0d7b26c1eaf5f37f67343219507580fb1950/output/AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:9.4.0] /home/mhd/.android/build-cache/b8dcd3e6889c8b72bb1aadd074251f701db3bc6e/output/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:9.4.0] /home/mhd/.android/build-cache/b8dcd3e6889c8b72bb1aadd074251f701db3bc6e/output/AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:9.4.0] /home/mhd/.android/build-cache/b8dcd3e6889c8b72bb1aadd074251f701db3bc6e/output/AndroidManifest.xml:22:13-58
