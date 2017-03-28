@@ -8,6 +8,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 public class AfterDonation extends AppCompatActivity {
     ViewPager viewPagerAfter;
@@ -17,6 +19,10 @@ public class AfterDonation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_donation);
+        Toolbar tb = (Toolbar)findViewById(R.id.toolbar1);
+        setSupportActionBar(tb);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         viewPagerAfter = (ViewPager) findViewById(R.id.viewPagerAfter);
         viewPagerAfter.setAdapter(new CustomAdapterAfter(getSupportFragmentManager(),getApplicationContext()));
         tabLayoutAfter = (TabLayout) findViewById(R.id.tablayoutAfter);
@@ -39,7 +45,11 @@ public class AfterDonation extends AppCompatActivity {
         });
 
     }
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        this.finish();
+        return super.onOptionsItemSelected(item);
+    }
     private class CustomAdapterAfter extends FragmentPagerAdapter {
 
         private String AfterDonation[]= {"After Donation", "Continue....", "Continue..."};

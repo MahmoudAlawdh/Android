@@ -85,6 +85,8 @@ public class HomeActivity extends AppCompatActivity {
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
                     public boolean onProfileChanged(View view, IProfile profile, boolean currentProfile) {
+                        Intent i = new Intent(HomeActivity.this,ProfileActivity.class);
+                        startActivity(i);
                         return false;
                     }
                 })

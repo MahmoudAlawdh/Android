@@ -8,6 +8,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 public class BeforeDonation extends AppCompatActivity {
     TabLayout tabLayoutBefore;
@@ -17,6 +19,9 @@ public class BeforeDonation extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_before_donation);
+        Toolbar tb = (Toolbar)findViewById(R.id.toolbar2);
+        setSupportActionBar(tb);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         viewPagerBefore = (ViewPager) findViewById(R.id.viewPagerBefore);
         viewPagerBefore.setAdapter(new CustomAdapterBefore(getSupportFragmentManager(),getApplicationContext()));
         tabLayoutBefore = (TabLayout) findViewById(R.id.tablayoutBefore);
@@ -38,6 +43,11 @@ public class BeforeDonation extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        this.finish();
+        return super.onOptionsItemSelected(item);
     }
     private class CustomAdapterBefore extends FragmentPagerAdapter {
 

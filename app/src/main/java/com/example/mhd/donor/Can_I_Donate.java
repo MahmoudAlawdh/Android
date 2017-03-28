@@ -8,6 +8,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 public class Can_I_Donate extends AppCompatActivity {
     TabLayout tabLayoutCan;
@@ -17,6 +19,9 @@ public class Can_I_Donate extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_can__i__donate);
+        Toolbar tb = (Toolbar)findViewById(R.id.toolbar3);
+        setSupportActionBar(tb);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         viewPagerCan = (ViewPager) findViewById(R.id.viewPagerCan);
         viewPagerCan.setAdapter(new CustomAdapterCan(getSupportFragmentManager(),getApplicationContext()));
         tabLayoutCan = (TabLayout) findViewById(R.id.tablayoutCan);
@@ -38,7 +43,11 @@ public class Can_I_Donate extends AppCompatActivity {
             }
         });
     }
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        this.finish();
+        return super.onOptionsItemSelected(item);
+    }
     private class CustomAdapterCan extends FragmentPagerAdapter {
 
         private String CanI[]= {"Can i Donate", "Continue...."};
