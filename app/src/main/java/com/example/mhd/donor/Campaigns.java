@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -58,9 +59,12 @@ public class Campaigns extends Fragment {
                     JSONArray a = new JSONArray(response);
                     for(int i = 0 ; i < a.length() ; i++){
                         JSONObject o = a.getJSONObject(i);
-                        model.add(new CampaignModel(o.getInt("CFDId"),o.getString("name"),o.getString("startdate"),o.getString("enddate"),o.getString("locationName"),
-                                o.getString("LLat"),o.getString("LLong"),o.getString("bloodTypes")));
-                        myv.notifyDataSetChanged();
+                        if( o.getString("status").toLowerCase().equals("active") ){
+                            model.add(new CampaignModel(o.getInt("CFDId"),o.getString("name"),o.getString("startdate"),o.getString("enddate"),o.getString("locationName"),
+                                    o.getString("LLat"),o.getString("LLong"),o.getString("bloodTypes")));
+                            Toast.makeText(getContext(), o.getString("status"), Toast.LENGTH_SHORT).show();
+                            myv.notifyDataSetChanged();
+                        }
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();

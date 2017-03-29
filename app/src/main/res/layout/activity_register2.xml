@@ -6,62 +6,106 @@
     android:layout_height="match_parent"
     tools:context="com.example.mhd.donor.Register2Activity">
 
-    <TextView
-        android:id="@+id/donation_inst"
+    <EditText
+        android:id="@+id/first_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp"
-        android:layout_marginTop="33dp"
-        android:fontFamily="serif"
-        android:text="Start Donation"
-        android:textColor="@color/common_google_signin_btn_text_dark_focused"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="First Name"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <TextView
-        android:id="@+id/donation_type"
+    <EditText
+        android:id="@+id/last_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Your Donation Type:"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Last Name"
+        android:layout_below="@+id/first_name"
+        android:layout_alignLeft="@+id/first_name"
+        android:layout_alignStart="@+id/first_name" />
+
+    <EditText
+        android:id="@+id/civil_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Civil ID"
+        android:layout_below="@+id/last_name"
+        android:layout_alignLeft="@+id/last_name"
+        android:layout_alignStart="@+id/last_name" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:text="Phone Number"
+        android:layout_below="@+id/civil_id"
+        android:layout_alignLeft="@+id/civil_id"
+        android:layout_alignStart="@+id/civil_id" />
+
+    <EditText
+        android:id="@+id/date_of_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        android:text="Date Of Birth"
+        android:layout_below="@+id/phone"
+        android:layout_alignLeft="@+id/phone"
+        android:layout_alignStart="@+id/phone" />
+
+    <RadioButton
+        android:id="@+id/female"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gender"
+        android:layout_alignStart="@+id/gender"
+        android:layout_below="@+id/gender"
+        android:layout_marginLeft="21dp"
+        android:layout_marginStart="21dp"
+        android:checked="false"
+        android:text="Female" />
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/date_of_birth"
+        android:layout_alignStart="@+id/date_of_birth"
+        android:layout_below="@+id/date_of_birth"
+        android:layout_marginTop="18dp"
+        android:text="Gender"
+        android:textAlignment="textStart"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginLeft="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_below="@+id/donation_inst"
-        android:layout_alignLeft="@+id/donation_inst"
-        android:layout_alignStart="@+id/donation_inst"
-        android:layout_marginTop="19dp" />
+        android:textStyle="bold" />
 
-    <CalendarView
-        android:id="@+id/calendarView3"
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/female"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="21dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <RadioButton
-        android:id="@+id/radioButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/donation_type"
-        android:layout_alignStart="@+id/donation_type"
-        android:layout_below="@+id/donation_type"
-        android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp" />
-
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RadioButton"
-        android:layout_below="@+id/radioButton"
-        android:layout_alignLeft="@+id/radioButton"
-        android:layout_alignStart="@+id/radioButton" />
-
+        android:layout_marginBottom="24dp"
+        android:layout_toEndOf="@+id/female"
+        android:layout_toRightOf="@+id/female"
+        android:text="Submit" />
 </RelativeLayout>

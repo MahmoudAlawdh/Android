@@ -2,6 +2,7 @@ package com.example.mhd.donor;
 
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -29,7 +30,8 @@ import java.util.ArrayList;
  */
 public class MyAppointments extends Fragment {
 
-
+    public final static String Filee ="donor";
+    public final static String profile ="profile";
     public MyAppointments() {
         // Required empty public constructor
     }
@@ -54,11 +56,13 @@ public class MyAppointments extends Fragment {
             public void onResponse(String response) {
                 try {
                     JSONArray a = new JSONArray(response);
+
                     for(int i = 0 ; i < a.length() ; i++){
                         JSONObject o = a.getJSONObject(i);
-                        model.add(new MyAppointmentModel(o.getInt("donationId"),o.getInt("donorCivilid"),o.getString("ddate"),o.getString("donationdestination"),o.getString("dnbloodtype")));
-                        myv.notifyDataSetChanged();
-
+                        if( o.getString("status").toLowerCase().equals("pending") )  {
+                            model.add(new MyAppointmentModel(o.getInt("donationId"), o.getInt("donorCivilid"), o.getString("ddate"), o.getString("donationdestination"), o.getString("dnbloodtype")));
+                            myv.notifyDataSetChanged();
+                        }
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
