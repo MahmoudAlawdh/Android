@@ -57,10 +57,10 @@
         android:id="@+id/Login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Log in "
         android:layout_below="@+id/FP"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp" />
+        android:layout_marginTop="35dp"
+        android:text="@string/LoginButton" />
 
     <Button
         android:id="@+id/FP"
@@ -69,7 +69,7 @@
         android:layout_marginLeft="62dp"
         android:layout_marginStart="62dp"
         android:background="@color/material_drawer_background"
-        android:text="Forgot your password? "
+        android:text="@string/foregtPassButten"
         android:textSize="8sp"
         android:layout_below="@+id/Password"
         android:layout_alignLeft="@+id/Login"
@@ -89,7 +89,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Don't have an account ? "
+        android:text="@string/accountbutten"
         android:layout_below="@+id/Login"
         android:layout_centerHorizontal="true" />
 
@@ -101,6 +101,6 @@
         android:layout_alignRight="@+id/Login"
         android:layout_below="@+id/textView9"
         android:layout_marginTop="14dp"
-        android:text="Sign up " />
+        android:text="@string/registerbutten" />
 
 </RelativeLayout>
