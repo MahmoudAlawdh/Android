@@ -55,10 +55,12 @@ public class MyAppointments extends Fragment {
                 try {
                     JSONArray a = new JSONArray(response);
                     for(int i = 0 ; i < a.length() ; i++){
-                        JSONObject o = a.getJSONObject(i);
-                        model.add(new MyAppointmentModel(o.getInt("donationId"),o.getInt("donorCivilid"),o.getString("ddate"),o.getString("donationdestination"),o.getString("dnbloodtype")));
-                        myv.notifyDataSetChanged();
 
+                        JSONObject o = a.getJSONObject(i);
+                        if( o.getString("status").toLowerCase().equals("pending") ) {
+                            model.add(new MyAppointmentModel(o.getInt("donationId"), o.getInt("donorCivilid"), o.getString("ddate"), o.getString("donationdestination"), o.getString("dnbloodtype")));
+                            myv.notifyDataSetChanged();
+                        }
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
