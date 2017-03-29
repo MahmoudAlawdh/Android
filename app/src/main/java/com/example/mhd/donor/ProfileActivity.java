@@ -11,9 +11,9 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        Toolbar tb = (Toolbar)findViewById(R.id.barr);
-        setSupportActionBar(tb);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        Toolbar tb = (Toolbar)findViewById(R.id.barr);
+//        setSupportActionBar(tb);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
 
