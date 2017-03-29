@@ -50,12 +50,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log in "
-        android:layout_below="@+id/Forget_password"
+        android:layout_below="@+id/FP"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="34dp" />
 
     <Button
-        android:id="@+id/Forget_password"
+        android:id="@+id/FP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="62dp"
