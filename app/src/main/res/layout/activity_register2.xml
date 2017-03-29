@@ -25,59 +25,67 @@
         android:id="@+id/first_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="42dp"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="50dp"
         android:ems="10"
+        android:fontFamily="serif"
+        android:hint="First Name"
         android:inputType="textPersonName"
-        android:text="First Name"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:textSize="14sp"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/planets_spinner"
+        android:layout_alignRight="@+id/submit"
+        android:layout_alignEnd="@+id/submit" />
 
     <EditText
         android:id="@+id/last_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Last Name"
-        android:layout_below="@+id/first_name"
         android:layout_alignLeft="@+id/first_name"
-        android:layout_alignStart="@+id/first_name" />
+        android:layout_alignStart="@+id/first_name"
+        android:layout_below="@+id/first_name"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
 
     <EditText
         android:id="@+id/civil_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Civil ID"
-        android:layout_below="@+id/last_name"
         android:layout_alignLeft="@+id/last_name"
-        android:layout_alignStart="@+id/last_name" />
+        android:layout_alignStart="@+id/last_name"
+        android:layout_below="@+id/last_name"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Civil_ID"
+        android:inputType="textPersonName"
+        android:textSize="14sp" />
 
     <EditText
         android:id="@+id/phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="phone"
-        android:text="Phone Number"
-        android:layout_below="@+id/civil_id"
         android:layout_alignLeft="@+id/civil_id"
-        android:layout_alignStart="@+id/civil_id" />
+        android:layout_alignStart="@+id/civil_id"
+        android:layout_below="@+id/civil_id"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:textSize="14sp" />
 
     <EditText
         android:id="@+id/date_of_birth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="date"
-        android:text="Date Of Birth"
-        android:layout_below="@+id/phone"
         android:layout_alignLeft="@+id/phone"
-        android:layout_alignStart="@+id/phone" />
+        android:layout_alignStart="@+id/phone"
+        android:layout_below="@+id/phone"
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="Date Of Birth"
+        android:inputType="date"
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/gender"
@@ -105,11 +113,10 @@
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:text="Submit"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="24dp"
-        android:layout_toEndOf="@+id/female"
-        android:layout_toRightOf="@+id/female"
-        android:text="Submit" />
+        android:layout_centerHorizontal="true" />
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -124,7 +131,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="RadioButton" />
+            android:text="Male" />
 
         <RadioButton
             android:id="@+id/female"
