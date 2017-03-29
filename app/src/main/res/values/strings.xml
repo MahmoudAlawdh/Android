@@ -12,6 +12,11 @@
     <string name="Logout">Logout</string>
     <string name="staticinfo">Basic info</string>
     <string name="title_activity_aboutus">AboutusActivity</string>
+    <string name="LoginButton">LOG IN</string>
+    <string name="foregtPassButten">Forgot your password?</string>
+    <string name="accountbutten">Do not have an account ?</string>
+    <string name="registerbutten">Sign Up</string>
+    <string name="dateButten">Date:</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

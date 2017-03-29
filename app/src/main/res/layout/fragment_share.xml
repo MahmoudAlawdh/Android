@@ -30,9 +30,9 @@
         android:textSize="14pt"
         android:textColor="@color/md_black_1000"
 
-        android:layout_marginBottom="27dp"
         android:layout_above="@+id/imageViewtwitter"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="29dp" />
 
     <ImageView
         android:id="@+id/imageViewwhatsapp"

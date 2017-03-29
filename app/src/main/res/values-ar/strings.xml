@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="LoginButton">تسجيل الدخول </string>
+    <string name="foregtPassButten">نسيت كلمة السر؟</string>
+    <string name="accountbutten">هل لديك حساب؟</string>
+    <string name="registerbutten">التسجيل</string>
+    <string name="dateButten">التاريخ:</string>
+
+</resources>
