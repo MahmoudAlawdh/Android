@@ -17,6 +17,10 @@
     <string name="accountbutten">Do not have an account ?</string>
     <string name="registerbutten">Sign Up</string>
     <string name="dateButten">Date:</string>
+    <string name="campaignText">Campaign</string>
+    <string name="Fromtext">From:</string>
+    <string name="totext">To:</string>
+
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

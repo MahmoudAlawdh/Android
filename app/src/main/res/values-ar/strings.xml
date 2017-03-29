@@ -5,5 +5,8 @@
     <string name="accountbutten">هل لديك حساب؟</string>
     <string name="registerbutten">التسجيل</string>
     <string name="dateButten">التاريخ:</string>
+    <string name="campaignText">حملة</string>
+    <string name="Fromtext">من:</string>
+    <string name="totext">إلى:</string>
 
-</resources>
+    </resources>
