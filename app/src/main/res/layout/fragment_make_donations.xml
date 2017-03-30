@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/textView38"
+        android:id="@+id/text_donation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
@@ -18,16 +18,16 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:typeface="sans"
+        android:layout_marginTop="45dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp" />
+        android:layout_centerHorizontal="true" />
 
     <Spinner
         android:id="@+id/spinnerSelectDonationType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
-        android:layout_below="@+id/textView38"
+        android:layout_below="@+id/text_donation"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="25dp"
@@ -41,11 +41,11 @@
         android:ems="10"
         android:hint="Select Date"
         android:inputType="date"
-        android:layout_marginTop="20dp"
+        android:drawablePadding="10dp"
         android:layout_below="@+id/spinnerSelectDonationType"
         android:layout_alignLeft="@+id/spinnerSelectDonationType"
         android:layout_alignStart="@+id/spinnerSelectDonationType"
-        android:drawablePadding="10dp"
+        android:layout_marginTop="48dp"
         android:layout_alignRight="@+id/spinnerSelectDonationType"
         android:layout_alignEnd="@+id/spinnerSelectDonationType" />
 
@@ -53,35 +53,35 @@
         android:id="@+id/spinnerBranches"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/editText2"
-        android:layout_marginBottom="21dp"
-        android:layout_alignLeft="@+id/editTextDate"
-        android:layout_alignStart="@+id/editTextDate"
-        android:layout_alignRight="@+id/spinnerSelectDonationType"
-        android:layout_alignEnd="@+id/spinnerSelectDonationType" />
+        android:layout_marginBottom="53dp"
+        android:layout_above="@+id/editTextTime"
+        android:layout_alignLeft="@+id/editTextTime"
+        android:layout_alignStart="@+id/editTextTime"
+        android:layout_alignRight="@+id/editTextTime"
+        android:layout_alignEnd="@+id/editTextTime" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editTextTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableLeft="@mipmap/clock"
         android:ems="10"
         android:hint="Select Time"
         android:inputType="time"
-        android:layout_marginBottom="75dp"
+        android:layout_marginBottom="27dp"
+        android:drawablePadding="10dp"
         android:layout_above="@+id/confirmButton"
         android:layout_alignLeft="@+id/editTextDate"
         android:layout_alignStart="@+id/editTextDate"
-        android:layout_alignRight="@+id/spinnerBranches"
-        android:layout_alignEnd="@+id/spinnerBranches"
-        android:drawablePadding="10dp"/>
+        android:layout_alignRight="@+id/editTextDate"
+        android:layout_alignEnd="@+id/editTextDate" />
 
     <Button
         android:id="@+id/confirmButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="42dp"
+        android:text="Confirm"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="93dp"
-        android:text="Confirm" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

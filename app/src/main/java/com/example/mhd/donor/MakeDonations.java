@@ -2,6 +2,8 @@ package com.example.mhd.donor;
 
 
 import android.app.DatePickerDialog;
+import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -14,6 +16,8 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -24,6 +28,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.google.android.gms.common.data.DataBufferUtils;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 
 /**
@@ -42,6 +47,17 @@ public class MakeDonations extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View vv = inflater.inflate(R.layout.fragment_make_donations, container, false);
+
+
+        TextView InstructionForDonation = (TextView) vv.findViewById(R.id.text_donation);
+
+        InstructionForDonation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(),StaticInfoFragment.class);
+                startActivity(i);
+            }
+        });
 
         Spinner donationType = (Spinner) vv.findViewById(R.id.spinnerSelectDonationType);
         final ArrayList<String> model=new ArrayList<>();
@@ -68,7 +84,7 @@ public class MakeDonations extends Fragment {
 
          final ArrayAdapter<String> adapterr =new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item,model1);
 
-        donationType.setAdapter(adapterr);
+        branchType.setAdapter(adapterr);
 
 
 //
@@ -81,33 +97,68 @@ public class MakeDonations extends Fragment {
 //            }
 //        });
 //
-//        EditText date = (EditText) vv.findViewById(R.id.editTextDate);
-//
-//        date.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(final View v) {
-//
-//
-//
-//                DatePickerDialog d = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
-//                    @Override
-//                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-//
-//                        Toast.makeText(getActivity(), year + "/" + month + "/" + dayOfMonth, Toast.LENGTH_SHORT).show();
-//
-//
-//
-//
-//                    }
-//                }, 2017, 3, 30);
-//
-//                d.show();
-//            }
-//        });
+        final EditText date = (EditText) vv.findViewById(R.id.editTextDate);
+
+        date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
 
 
+
+                DatePickerDialog d = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+
+                        Toast.makeText(getActivity(), year + "/" + month + "/" + dayOfMonth, Toast.LENGTH_SHORT).show();
+
+                        date.setText(year + "/" + month + "/" + dayOfMonth);
+
+
+
+                    }
+                }, 2017, 3, 30);
+
+                d.show();
+            }
+        });
+
+
+        final EditText time = (EditText) vv.findViewById(R.id.editTextTime);
+
+        time.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v) {
+
+
+
+
+                TimePickerDialog d = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                        time.setText(hourOfDay+":"+minute);
+                    }
+                }, 12, 0, false);
+
+                d.show();
+            }
+        });
+
+
+        Button confirm =(Button) vv.findViewById(R.id.confirmButton);
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+            Toast
+
+                startActivity(i);
+            }
+        });
+
+        });
         return vv;
 
     }
-}
+
 
