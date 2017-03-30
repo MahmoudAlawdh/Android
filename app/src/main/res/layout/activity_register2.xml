@@ -134,36 +134,36 @@
         android:layout_above="@+id/submit"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
-    <RadioButton
-        android:id="@+id/radioFemalere"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
 
-        android:layout_marginLeft="23dp"
-        android:layout_marginStart="23dp"
-        android:layout_toEndOf="@+id/radioMale"
-        android:layout_toRightOf="@+id/radioMale"
-        android:layout_weight="1"
-        android:enabled="true"
-        android:text="@string/radio_female"
-        android:drawableLeft="@mipmap/businesswoman"
-        android:drawablePadding="10dp"
-        />
+        <RadioButton
+            android:id="@+id/radioFemalere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-    <RadioButton
-        android:id="@+id/radioMalere"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="23dp"
-        android:layout_marginStart="23dp"
-        android:layout_weight="1"
-        android:checked="true"
-        android:drawableLeft="@mipmap/businessman"
-        android:drawablePadding="10dp"
-        android:enabled="true"
-        android:text="@string/radio_male" />
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:layout_toEndOf="@+id/radioMale"
+            android:layout_toRightOf="@+id/radioMale"
+            android:layout_weight="1"
+            android:drawableLeft="@mipmap/businesswoman"
+            android:drawablePadding="10dp"
+            android:enabled="true"
+            android:text="female" />
+
+        <RadioButton
+            android:id="@+id/radioMalere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:drawableLeft="@mipmap/businessman"
+            android:drawablePadding="10dp"
+            android:enabled="true"
+            android:text="male" />
 </RadioGroup>
 
 

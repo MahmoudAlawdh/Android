@@ -43,17 +43,21 @@ public class MakeDonations extends Fragment {
         // Inflate the layout for this fragment
         View vv = inflater.inflate(R.layout.fragment_make_donations, container, false);
 
+        Spinner donationType = (Spinner) vv.findViewById(R.id.spinnerSelectDonationType);
         final ArrayList<String> model=new ArrayList<>();
 
         model.add("Select Donation Type");
         model.add("Blood Cells");
         model.add("Platelets");
 
+        final ArrayAdapter<String> adapter=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item,model);
+        donationType.setAdapter(adapter);
 
 
-       Spinner donationType = (Spinner) vv.findViewById(R.id.spinnerSelectDonationType);
 
 
+
+        Spinner branchType = (Spinner) vv.findViewById(R.id.spinnerBranches);
         final ArrayList<String> model1=new ArrayList<>();
 
         model1.add("Select Branch");
@@ -62,44 +66,44 @@ public class MakeDonations extends Fragment {
         model1.add("AlJahra'a");
         model1.add("AlAsma");
 
-        Spinner branchType = (Spinner) vv.findViewById(R.id.spinnerBranches);
+         final ArrayAdapter<String> adapterr =new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item,model1);
+
+        donationType.setAdapter(adapterr);
 
 
-
-        final ArrayAdapter<String> adapter=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item,model);
-
-        donationType.setAdapter(adapter);
-
-        donationType.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getActivity(), model.get(position), Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        EditText date = (EditText) vv.findViewById(R.id.editTextDate);
-
-        date.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View v) {
-
-
-
-                DatePickerDialog d = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-
-                        Toast.makeText(getActivity(), year + "/" + month + "/" + dayOfMonth, Toast.LENGTH_SHORT).show();
-
-
-
-
-                    }
-                }, 2017, 3, 30);
-
-                d.show();
-            }
-        });
+//
+//
+//
+//        donationType.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Toast.makeText(getActivity(), model.get(position), Toast.LENGTH_SHORT).show();
+//            }
+//        });
+//
+//        EditText date = (EditText) vv.findViewById(R.id.editTextDate);
+//
+//        date.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(final View v) {
+//
+//
+//
+//                DatePickerDialog d = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
+//                    @Override
+//                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+//
+//                        Toast.makeText(getActivity(), year + "/" + month + "/" + dayOfMonth, Toast.LENGTH_SHORT).show();
+//
+//
+//
+//
+//                    }
+//                }, 2017, 3, 30);
+//
+//                d.show();
+//            }
+//        });
 
 
         return vv;
