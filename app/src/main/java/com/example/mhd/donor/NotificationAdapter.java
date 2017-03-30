@@ -41,19 +41,19 @@ public class NotificationAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View v = inflater.inflate(R.layout.list_item_myappointment,null);
+        View v = inflater.inflate(R.layout.list_item_notification,null);
 
-        TextView Date = (TextView)v.findViewById(R.id.Date);
-        TextView Bloodtype = (TextView)v.findViewById(R.id.BloodType);
-        TextView Destination = (TextView)v.findViewById(R.id.Destination);
+        TextView Date = (TextView)v.findViewById(R.id.date_noti111111);
+        TextView title = (TextView)v.findViewById(R.id.title_noti111111);
+        TextView Destination = (TextView)v.findViewById(R.id.desc_noti11111);
 
         final NotificationModel m = model.get(position);
 
 
-        Date.setText(" "+m.getDate());
-        Bloodtype.setText(" "+m.getTitle());
+        Date.setText(" "+m.getTitle());
+        title.setText(" "+m.getTitle());
 
-        Destination.setText(""+m.getDescription());
+        Destination.setText(""+m.getTitle());
 
 
         return v;

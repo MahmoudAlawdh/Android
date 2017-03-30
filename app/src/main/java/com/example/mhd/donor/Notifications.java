@@ -38,42 +38,44 @@ public class Notifications extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_notifications, container, false);
-//
-//
-//        ListView lv = (ListView) v.findViewById(R.id.notilist);
-//
-//        final ArrayList<NotificationModel> model= new ArrayList<>();
-//        final NotificationAdapter myv = new NotificationAdapter(model,getActivity());
-//        String url="http://34.196.107.188:8081/MhealthWeb/webresources/bbnotification";
-//
-//        final RequestQueue queue= Connection.getInstance().getRequestQueue(getContext());
-//
-//        final StringRequest stringRequest=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
-//            @Override
-//            public void onResponse(String response) {
-//                try {
-//                    JSONArray a = new JSONArray(response);
-//                    Toast.makeText(getContext(), model.size(), Toast.LENGTH_SHORT).show();
-//                    for(int i = 0 ; i < a.length() ; i++){
-//                        JSONObject o = a.getJSONObject(i);
-//                        //            if( o.getString("status").toLowerCase().equals("accepted") ) {
-//                        model.add(new NotificationModel(o.getInt("date"), o.getInt("description"), o.getString("notifId"), o.getString("status"), o.getString("title")));
-//                        myv.notifyDataSetChanged();
-//                        //           }
-//                    }
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-//
-//            }
-//        }, new Response.ErrorListener() {
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//
-//            }
-//        });
-//        queue.add(stringRequest);
-//        lv.setAdapter(myv);
+
+        ListView lv = (ListView) v.findViewById(R.id.notilist);
+
+        final ArrayList<NotificationModel> model= new ArrayList<>();
+        final NotificationAdapter myv = new NotificationAdapter(model,getActivity());
+        String url="http://34.196.107.188:8081/MhealthWeb/webresources/bbnotification";
+
+        final RequestQueue queue= Connection.getInstance().getRequestQueue(getContext());
+
+        final StringRequest stringRequest=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONArray a = new JSONArray(response);
+
+                    for(int i = 0 ; i < a.length() ; i++){
+                        JSONObject o = a.getJSONObject(i);
+
+                        model.add(new NotificationModel(o.getString("date"), o.getString("description"), o.getInt("notifId"), o.getInt("status"), o.getString("title")));
+
+
+                        myv.notifyDataSetChanged();
+
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                    Toast.makeText(getContext(), "asdasd", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+        queue.add(stringRequest);
+        lv.setAdapter(myv);
         return v;
     }
 
