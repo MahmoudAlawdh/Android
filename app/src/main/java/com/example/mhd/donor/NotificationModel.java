@@ -18,6 +18,7 @@ public class NotificationModel {
         this.setStatus(status);
         this.setTitle(title);
     }
+
     public NotificationModel(int date, int description, String notifId, String status, String title){
 
     }
