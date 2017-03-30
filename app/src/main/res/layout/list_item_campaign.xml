@@ -21,7 +21,7 @@
         android:layout_toEndOf="@+id/imageView5"
         android:layout_toRightOf="@+id/imageView5"
         android:layout_marginLeft="5dp"
-        android:text="Campaign" />
+        android:text="@string/campaignText" />
 
     <TextView
         android:id="@+id/Name"
@@ -57,7 +57,9 @@
         android:layout_toRightOf="@+id/imageView7"
         android:layout_marginLeft="5dp"
         android:textSize="11sp"
-        android:text="From:"
+        android:text="@string/Fromtext"
+
+
         />
 
     <TextView
@@ -67,6 +69,7 @@
         android:text="Feb 22, 2017"
         android:textColor="@color/md_black_1000"
         android:textSize="16sp"
+        android:paddingLeft="15dp"
         android:layout_marginTop="5dp"
         android:layout_below="@+id/imageView7"
         android:layout_alignLeft="@+id/imageView7"
@@ -90,7 +93,8 @@
         android:layout_alignTop="@+id/imageView9"
         android:layout_toEndOf="@+id/imageView9"
         android:layout_toRightOf="@+id/imageView9"
-        android:text="To:"
+
+    android:text="@string/totext"
         android:textSize="11sp"
         android:layout_marginLeft="5dp"
         />

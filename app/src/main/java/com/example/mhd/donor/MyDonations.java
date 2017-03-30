@@ -20,7 +20,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 
 /**
@@ -58,11 +63,13 @@ public class MyDonations extends Fragment {
                     for(int i = 0 ; i < a.length() ; i++){
                         JSONObject o = a.getJSONObject(i);
             //            if( o.getString("status").toLowerCase().equals("accepted") ) {
-                            model.add(new MyAppointmentModel(o.getInt("donationId"), o.getInt("donorCivilid"), o.getString("ddate"), o.getString("donationdestination"), o.getString("dnbloodtype")));
+                            model.add(new MyAppointmentModel(o.getInt("donationId"), o.getInt("donorCivilid"), fixdate(o.getString("ddate")), o.getString("donationdestination"), o.getString("dnbloodtype")));
                             myv.notifyDataSetChanged();
              //           }
                     }
                 } catch (JSONException e) {
+                    e.printStackTrace();
+                } catch (ParseException e) {
                     e.printStackTrace();
                 }
 
@@ -84,5 +91,18 @@ public class MyDonations extends Fragment {
 
         return v;
     }
+    public String fixdate(String date) throws ParseException {
+        DateFormat format  = new SimpleDateFormat("yyyy-mm-dd", Locale.ENGLISH);
+        SimpleDateFormat fmtOut = new SimpleDateFormat("EEE, MMM d, ''yy");
+        Date d = null;
+        try {
+            d = format.parse(date);
+            //"EEE, MMM d, ''yy"
 
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return fmtOut.format(d);
+    }
 }

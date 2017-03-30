@@ -1,24 +1,38 @@
 <resources>
-    <string name="app_name">Donor</string>
-    <string name="title_activity_home">HomeActivity</string>
-    <string name="MakeDonation">MakeDonation</string>
-    <string name="Myappointments">My appointments</string>
-    <string name="Notification">Notifications</string>
-    <string name="Campaigns">Campaigns</string>
-    <string name="MyDonations">My Donations</string>
-    <string name="Share">Share</string>
-    <string name="Aboutus">About us</string>
-    <string name="Settings">Settings</string>
-    <string name="Logout">Logout</string>
-    <string name="staticinfo">Basic info</string>
-    <string name="title_activity_aboutus">AboutusActivity</string>
-    <string name="LoginButton">LOG IN</string>
-    <string name="foregtPassButten">Forgot your password?</string>
-    <string name="accountbutten">Do not have an account ?</string>
-    <string name="registerbutten">Sign Up</string>
-    <string name="dateButten">Date:</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+<string name="app_name">Donor</string>
+<string name="title_activity_home">HomeActivity</string>
+<string name="MakeDonation">MakeDonation</string>
+<string name="Myappointments">My appointments</string>
+<string name="Notification">Notifications</string>
+<string name="Campaigns">Campaigns</string>
+<string name="MyDonations">My Donations</string>
+<string name="Share">Share</string>
+<string name="Aboutus">About us</string>
+<string name="Settings">Settings</string>
+<string name="Logout">Logout</string>
+<string name="staticinfo">Basic info</string>
+<string name="title_activity_aboutus">AboutusActivity</string>
+<string name="LoginButton">LOG IN</string>
+<string name="foregtPassButten">Forgot your password?</string>
+<string name="accountbutten">Do not have an account ?</string>
+<string name="registerbutten">Sign Up</string>
+<string name="dateButten">Date:</string>
+<string name="campaignText">Campaign</string>
+<string name="Fromtext">From:</string>
+<string name="totext">To:</string>
+<string name="basictext">Basic Information</string>
+<string name="donationprobutton">Donation Process</string>
+<string name="canIButten">Can I Donate?</string>
+<string name="beforeBytten">Before Donation</string>
+<string name="afterbutten">After Donation</string>
+<string name="sharetext">Thank you for donating your blood today, which will help patients who are in desperate need to your blood.</string>
+<string name="sharewithtext">Share With</string>
+<string name="settingtext">Settings</string>
+<string name="hello_blank_fragment">Hello blank fragment</string>
+<string name="notifcation">Notifcatons</string>
+<string name="languagetext">Language</string>
+    <string name="radio_male">Male</string>
+    <string name="radio_female">Female</string>
+    <string name="btn_display">Display</string>
 
 </resources>

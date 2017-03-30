@@ -2,6 +2,7 @@ package com.example.mhd.donor;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.v4.app.FragmentManager;
@@ -25,11 +26,20 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 public class HomeActivity extends AppCompatActivity {
     final FragmentM f = FragmentM.getInstance();
     final FragmentManager fm=getSupportFragmentManager();
-
+    public final static String Filee ="donor";
+    public final static String profile ="profile";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        SharedPreferences preferences=getSharedPreferences(Filee,MODE_PRIVATE);
+        String email=preferences.getString(profile,"notfound");
+        Toast.makeText(this, email, Toast.LENGTH_SHORT).show();
+
+
+
+
 
         fm.beginTransaction()
                 .replace(R.id.Layout,f.getMakeDonations()).commit();

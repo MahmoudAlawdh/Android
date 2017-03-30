@@ -21,7 +21,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 
 /**
@@ -60,13 +65,28 @@ public class Campaigns extends Fragment {
                     for(int i = 0 ; i < a.length() ; i++){
                         JSONObject o = a.getJSONObject(i);
                         if( o.getString("status").toLowerCase().equals("active") ){
-                            model.add(new CampaignModel(o.getInt("CFDId"),o.getString("name"),o.getString("startdate"),o.getString("enddate"),o.getString("locationName"),
+
+                            String startd = fixdate(o.getString("startdate"));
+                            String endd = fixdate(o.getString("enddate"));
+
+
+
+
+
+
+
+
+
+
+                            model.add(new CampaignModel(o.getInt("CFDId"),o.getString("name"),startd,endd,o.getString("locationName"),
                                     o.getString("LLat"),o.getString("LLong"),o.getString("bloodTypes")));
                             Toast.makeText(getContext(), o.getString("status"), Toast.LENGTH_SHORT).show();
                             myv.notifyDataSetChanged();
                         }
                     }
                 } catch (JSONException e) {
+                    e.printStackTrace();
+                } catch (ParseException e) {
                     e.printStackTrace();
                 }
 
@@ -99,6 +119,21 @@ public class Campaigns extends Fragment {
 
 
         return v;
+    }
+
+    public String fixdate(String date) throws ParseException {
+        DateFormat format  = new SimpleDateFormat("yyyy-mm-dd", Locale.ENGLISH);
+        SimpleDateFormat fmtOut = new SimpleDateFormat("EEE, MMM d, ''yy");
+        Date d = null;
+        try {
+            d = format.parse(date);
+            //"EEE, MMM d, ''yy"
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        return fmtOut.format(d);
     }
 
 }
