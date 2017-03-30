@@ -1,76 +1,21 @@
 package com.example.mhd.donor;
 
-/**
- * Created by PIFSS on 3/27/2017.
- */
 
 public class Profile {
 
-    private String firstName;
-    private String lastName;
-    private String gender;
-    private String email;
     private String birthDate;
     private String bloodType;
-    private int donorId;
-    private String  nationality;
+    private String civilId;
+    private Integer deleted;
+    private Integer donorId;
+    private String email;
+    private String firstName;
+    private String gender;
+    private String lastName;
+    private String nationality;
     private String password;
     private String phoneNumber;
-
-
-
-    public Profile(){
-
-    }
-
-    public void Login(String username, String password){
-
-    }
-    public Profile(String firstName, String lastName, String gender, String email, String birthDate, String bloodType, int donorId, String nationality, String password, String phoneNumber) {
-        this.setFirstName(firstName);
-        this.setLastName(lastName);
-        this.setGender(gender);
-        this.setEmail(email);
-        this.setBirthDate(birthDate);
-        this.setBloodType(bloodType);
-        this.setDonorId(donorId);
-        this.setNationality(nationality);
-        this.setPassword(password);
-        this.setPhoneNumber(phoneNumber);
-    }
-
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    private Boolean status;
 
     public String getBirthDate() {
         return birthDate;
@@ -88,12 +33,60 @@ public class Profile {
         this.bloodType = bloodType;
     }
 
-    public int getDonorId() {
+    public String getCivilId() {
+        return civilId;
+    }
+
+    public void setCivilId(String civilId) {
+        this.civilId = civilId;
+    }
+
+    public Integer getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(Integer deleted) {
+        this.deleted = deleted;
+    }
+
+    public Integer getDonorId() {
         return donorId;
     }
 
-    public void setDonorId(int donorId) {
+    public void setDonorId(Integer donorId) {
         this.donorId = donorId;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getNationality() {
@@ -119,4 +112,13 @@ public class Profile {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean status) {
+        this.status = status;
+    }
+
 }

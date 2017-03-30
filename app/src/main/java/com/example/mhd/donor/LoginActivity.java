@@ -37,12 +37,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-//
-//                String s = "{'birthDate':'2017-01-01T00:00:00Z','bloodType':'O','civilId':'22','donorId':78,'email':'soso@gmail.com','firstName':'Ali','gender':'0','lastName':'Ali','nationality':'K','password':'Aa123@','phoneNumber':'98765432','status':true}";
-//                SharedPreferences preferences=getSharedPreferences(Filee,MODE_PRIVATE);
-//                SharedPreferences.Editor editor=preferences.edit();
-//                editor.putString(profile,s);
-//                editor.commit();
+
                 
                 Intent i = new Intent(LoginActivity.this,RegisterActivity.class);
                 startActivity(i);
@@ -66,6 +61,12 @@ public class LoginActivity extends AppCompatActivity {
                         public void onResponse(JSONObject response) {
                             try {
                                 if(!response.getString("errorMsgEn").equals("Error")){
+
+                                    String s = response.getJSONObject("items").toString();
+                                    SharedPreferences preferences=getSharedPreferences(Filee,MODE_PRIVATE);
+                                    SharedPreferences.Editor editor=preferences.edit();
+                                    editor.putString(profile,s);
+                                    editor.commit();
                                     Intent i = new Intent(LoginActivity.this,HomeActivity.class);
                                     startActivity(i);
                                 }
