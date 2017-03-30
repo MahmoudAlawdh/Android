@@ -29,7 +29,7 @@
         android:layout_marginBottom="13dp"
         android:ems="10"
         android:hint="Email"
-        android:drawableLeft="@mipmap/closeenvelope"
+        android:drawableLeft="@mipmap/closeeenvelope"
         android:inputType="textEmailAddress"
         android:drawablePadding="10dp"
         />
@@ -41,7 +41,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:drawableLeft="@mipmap/password11"
+        android:drawableLeft="@mipmap/padlock"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -65,8 +65,9 @@
         android:id="@+id/Login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="39dp"
         android:text="@string/LoginButton"
+        android:background="@drawable/button_shap"
         android:layout_below="@+id/FP"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -75,7 +76,7 @@
         android:id="@+id/FP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/material_drawer_background"
+        android:background="@drawable/button_shap"
         android:text="@string/foregtPassButten"
         android:textSize="8sp"
         android:layout_marginTop="11dp"
@@ -96,18 +97,23 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="21dp"
         android:text="@string/accountbutten"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp"
         android:layout_below="@+id/Login"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignLeft="@+id/textView10"
+        android:layout_alignStart="@+id/textView10" />
 
     <Button
         android:id="@+id/Sign_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/registerbutten"
+        android:background="@drawable/button_shap"
         android:layout_below="@+id/textView9"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp" />
 
 </RelativeLayout>

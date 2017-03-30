@@ -34,7 +34,7 @@
         android:layout_below="@+id/toolbar100"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:drawableLeft="@mipmap/username1111"
+        android:drawableLeft="@mipmap/user11"
         android:drawablePadding="10dp"
         />
 
@@ -50,7 +50,7 @@
         android:layout_below="@+id/first_name"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:drawableLeft="@mipmap/username1111"
+        android:drawableLeft="@mipmap/user11"
         android:drawablePadding="10dp"
         />
 
@@ -66,7 +66,7 @@
         android:layout_below="@+id/last_name"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:drawableLeft="@mipmap/idcard"
+        android:drawableLeft="@mipmap/idcards"
         android:drawablePadding="10dp"
 
         />
@@ -84,7 +84,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:drawablePadding="10dp"
-        android:drawableLeft="@mipmap/phonereceiver"
+        android:drawableLeft="@mipmap/phonerreceiver"
         />
 
     <EditText
@@ -99,7 +99,7 @@
         android:layout_below="@+id/phone"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:drawableLeft="@mipmap/calendarwithdate"
+        android:drawableLeft="@mipmap/calnderr"
         android:drawablePadding="10dp"
         />
 
@@ -109,32 +109,35 @@
         android:layout_height="wrap_content"
         android:text="Gender"
         android:drawablePadding="10dp"
-        android:drawableLeft="@mipmap/gendersymbols"
+        android:drawableLeft="@mipmap/unitedheterosexualsymbols"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginBottom="13dp"
-        android:layout_above="@+id/radioSex"
+        android:layout_below="@+id/date_of_birth"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp" />
 
     <Button
         android:id="@+id/submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="28dp"
-        android:text="Submit" />
+        android:text="Submit"
+        android:background="@drawable/button_shap"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/radioSex"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <RadioGroup
         android:id="@+id/radioSex"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:layout_above="@+id/submit"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
-
+        android:layout_below="@+id/gender"
+        android:layout_alignLeft="@+id/gender"
+        android:layout_alignStart="@+id/gender"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp">
         <RadioButton
             android:id="@+id/radioFemalere"
             android:layout_width="wrap_content"
@@ -145,10 +148,11 @@
             android:layout_toEndOf="@+id/radioMale"
             android:layout_toRightOf="@+id/radioMale"
             android:layout_weight="1"
-            android:drawableLeft="@mipmap/businesswoman"
-            android:drawablePadding="10dp"
             android:enabled="true"
-            android:text="female" />
+            android:text="@string/radio_female"
+            android:drawableLeft="@mipmap/businesswoman1"
+            android:drawablePadding="10dp"
+            />
 
         <RadioButton
             android:id="@+id/radioMalere"
@@ -160,11 +164,11 @@
             android:layout_marginStart="23dp"
             android:layout_weight="1"
             android:checked="true"
-            android:drawableLeft="@mipmap/businessman"
+            android:drawableLeft="@mipmap/businessman1"
             android:drawablePadding="10dp"
             android:enabled="true"
-            android:text="male" />
-</RadioGroup>
+            android:text="@string/radio_male" />
+    </RadioGroup>
 
 
-    </RelativeLayout>
+</RelativeLayout>
