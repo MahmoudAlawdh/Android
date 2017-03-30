@@ -20,18 +20,19 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
     <TextView
         android:id="@+id/Mhealth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewmain"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp"
         android:fontFamily="serif"
         android:text="MHEALTH"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="50sp"
-        android:textStyle="bold"
-        android:layout_above="@+id/textViewmain"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="21dp" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView"
