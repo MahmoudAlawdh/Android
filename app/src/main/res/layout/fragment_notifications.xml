@@ -5,9 +5,10 @@
     tools:context="com.example.mhd.donor.Notifications">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ListView
+        android:id="@+id/notilist"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="notifications" />
+        android:layout_height="match_parent" />
 
 </FrameLayout>
