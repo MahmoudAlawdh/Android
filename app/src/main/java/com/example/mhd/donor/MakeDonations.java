@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -49,12 +50,21 @@ public class MakeDonations extends Fragment {
         model.add("Platelets");
 
 
+
+       Spinner donationType = (Spinner) vv.findViewById(R.id.spinnerSelectDonationType);
+
+
         final ArrayList<String> model1=new ArrayList<>();
 
         model1.add("Select Branch");
-        model1.add("Salmiya");
-        model1.add("Hawaly");
-       Spinner donationType = (Spinner) vv.findViewById(R.id.spinnerSelectDonationType);
+        model1.add("AlJabriya- Main Branch");
+        model1.add("AlAdan");
+        model1.add("AlJahra'a");
+        model1.add("AlAsma");
+
+        Spinner branchType = (Spinner) vv.findViewById(R.id.spinnerBranches);
+
+
 
         final ArrayAdapter<String> adapter=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_spinner_item,model);
 
@@ -67,7 +77,7 @@ public class MakeDonations extends Fragment {
             }
         });
 
-        Button date = (Button) vv.findViewById(R.id.date_picker);
+        EditText date = (EditText) vv.findViewById(R.id.editTextDate);
 
         date.setOnClickListener(new View.OnClickListener() {
             @Override
