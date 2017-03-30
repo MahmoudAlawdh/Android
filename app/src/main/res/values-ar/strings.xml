@@ -8,5 +8,14 @@
     <string name="campaignText">حملة</string>
     <string name="Fromtext">من:</string>
     <string name="totext">إلى:</string>
-
+    <string name="basictext">معلومات عامة</string>
+    <string name="donationprobutton">عملية التبرع</string>
+    <string name="canIButten">هل أستطيع التبرع؟</string>
+    <string name="beforeBytten">قبل التبرع</string>
+    <string name="afterbutten">بعد التبرع</string>
+    <string name="sharetext">شكرا لتبرعك اليوم فبهذا تساعد من هم بحاجة ماسة الى دمك من المرضى</string>
+    <string name="sharewithtext">المشاركة بــ</string>
+    <string name="settingtext">الإعدادات</string>
+    <string name="notifcation">الإشعارات</string>
+    <string name="languagetext">اللغة</string>
     </resources>
