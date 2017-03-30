@@ -23,128 +23,148 @@
 
     <EditText
         android:id="@+id/first_name"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:fontFamily="serif"
         android:hint="First Name"
         android:inputType="textPersonName"
         android:textSize="14sp"
-        android:layout_marginTop="33dp"
-        android:layout_below="@+id/planets_spinner"
-        android:layout_alignRight="@+id/submit"
-        android:layout_alignEnd="@+id/submit" />
+        android:layout_marginTop="70dp"
+        android:layout_below="@+id/toolbar100"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:drawableLeft="@mipmap/username1111"
+        android:drawablePadding="10dp"
+        />
 
     <EditText
         android:id="@+id/last_name"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/first_name"
-        android:layout_alignStart="@+id/first_name"
-        android:layout_below="@+id/first_name"
         android:ems="10"
         android:fontFamily="serif"
         android:hint="Last Name"
         android:inputType="textPersonName"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:layout_below="@+id/first_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:drawableLeft="@mipmap/username1111"
+        android:drawablePadding="10dp"
+        />
 
     <EditText
         android:id="@+id/civil_id"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/last_name"
-        android:layout_alignStart="@+id/last_name"
-        android:layout_below="@+id/last_name"
         android:ems="10"
         android:fontFamily="serif"
         android:hint="Civil_ID"
         android:inputType="textPersonName"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:layout_below="@+id/last_name"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:drawableLeft="@mipmap/idcard"
+        android:drawablePadding="10dp"
+
+        />
 
     <EditText
         android:id="@+id/phone"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/civil_id"
-        android:layout_alignStart="@+id/civil_id"
-        android:layout_below="@+id/civil_id"
         android:ems="10"
         android:fontFamily="serif"
         android:hint="Phone Number"
         android:inputType="phone"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:layout_below="@+id/civil_id"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@mipmap/phonereceiver"
+        />
 
     <EditText
         android:id="@+id/date_of_birth"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/phone"
-        android:layout_alignStart="@+id/phone"
-        android:layout_below="@+id/phone"
         android:ems="10"
         android:fontFamily="serif"
-        android:hint="Date Of Birth"
+        android:hint="Birth Date"
         android:inputType="date"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:layout_below="@+id/phone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:drawableLeft="@mipmap/calendarwithdate"
+        android:drawablePadding="10dp"
+        />
 
     <TextView
         android:id="@+id/gender"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/date_of_birth"
-        android:layout_alignStart="@+id/date_of_birth"
-        android:layout_below="@+id/date_of_birth"
-        android:layout_marginTop="18dp"
         android:text="Gender"
-        android:textAlignment="textStart"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@mipmap/gendersymbols"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <Spinner
-        android:id="@+id/planets_spinner"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/female"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="43dp" />
+        android:textStyle="bold"
+        android:layout_marginBottom="13dp"
+        android:layout_above="@+id/radioSex"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/submit"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="28dp"
-        android:text="Submit"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:text="Submit" />
     <RadioGroup
+        android:id="@+id/radioSex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_above="@+id/submit"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+    <RadioButton
+        android:id="@+id/radioFemalere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/planets_spinner"
-        android:layout_toEndOf="@+id/female"
-        android:layout_toRightOf="@+id/female"
-        android:id="@+id/radioGroup">
 
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Male" />
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_toEndOf="@+id/radioMale"
+        android:layout_toRightOf="@+id/radioMale"
+        android:layout_weight="1"
+        android:enabled="true"
+        android:text="@string/radio_female"
+        android:drawableLeft="@mipmap/businesswoman"
+        android:drawablePadding="10dp"
+        />
 
-        <RadioButton
-            android:id="@+id/female"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/gender"
-            android:layout_alignStart="@+id/gender"
-            android:layout_below="@+id/gender"
-            android:layout_marginLeft="21dp"
-            android:layout_marginStart="21dp"
-            android:layout_weight="1"
-            android:checked="false"
-            android:text="Female" />
-    </RadioGroup>
+    <RadioButton
+        android:id="@+id/radioMalere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="23dp"
+        android:layout_marginStart="23dp"
+        android:layout_weight="1"
+        android:checked="true"
+        android:drawableLeft="@mipmap/businessman"
+        android:drawablePadding="10dp"
+        android:enabled="true"
+        android:text="@string/radio_male" />
+</RadioGroup>
 
-</RelativeLayout>
+
+    </RelativeLayout>

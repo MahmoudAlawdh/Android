@@ -31,4 +31,8 @@
 <string name="hello_blank_fragment">Hello blank fragment</string>
 <string name="notifcation">Notifcatons</string>
 <string name="languagetext">Language</string>
+    <string name="radio_male">Male</string>
+    <string name="radio_female">Female</string>
+    <string name="btn_display">Display</string>
+
 </resources>
