@@ -46,7 +46,7 @@
         android:layout_marginLeft="10dp"
 
         android:layout_marginTop="10dp"
-        app:srcCompat="@mipmap/calendar" />
+        app:srcCompat="@mipmap/calnderr" />
 
     <TextView
         android:id="@+id/textView16"
@@ -79,12 +79,12 @@
         android:id="@+id/imageView9"
         android:layout_width="10dp"
         android:layout_height="10dp"
-        android:layout_alignTop="@+id/textView16"
+        android:layout_above="@+id/StartDate"
         android:layout_marginLeft="82dp"
         android:layout_marginStart="82dp"
         android:layout_toEndOf="@+id/Name"
         android:layout_toRightOf="@+id/Name"
-        app:srcCompat="@mipmap/calendar" />
+        app:srcCompat="@mipmap/calnderr" />
 
     <TextView
         android:id="@+id/textView18"
@@ -94,7 +94,7 @@
         android:layout_toEndOf="@+id/imageView9"
         android:layout_toRightOf="@+id/imageView9"
 
-    android:text="@string/totext"
+        android:text="@string/totext"
         android:textSize="11sp"
         android:layout_marginLeft="5dp"
         />

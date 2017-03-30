@@ -11,74 +11,83 @@
         android:textColor="@color/md_black_1000"
         android:textSize="25pt"
         android:text="@string/settingtext"
+
         android:id="@+id/textView5"/>
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:textSize="13pt"
         android:text="@string/notifcation"
+        android:textColor="@color/md_black_1000"
         android:id="@+id/notifcationSettings"
         android:layout_marginBottom="35dp"
         android:layout_above="@+id/imageView13"
         android:layout_centerHorizontal="true" />
+
     <ImageView
-        android:layout_height="wrap_content"
-        android:layout_width="40dp"
         android:id="@+id/imageView8"
-        app:srcCompat="@mipmap/alarm"
-        android:layout_alignBottom="@+id/toggleButton"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/tur"
+        android:layout_above="@+id/textView6"
         android:layout_toLeftOf="@+id/notifcationSettings"
         android:layout_toStartOf="@+id/notifcationSettings"
-        android:layout_marginRight="19dp"
-        android:layout_marginEnd="19dp" />
+        android:layout_marginRight="18dp"
+        android:layout_marginEnd="18dp" />
     <ToggleButton
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:text="ToggleButton"
+        android:background="#C9C7C8"
         android:id="@+id/toggleButton"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
         android:layout_alignBaseline="@+id/notifcationSettings"
         android:layout_alignBottom="@+id/notifcationSettings"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_toRightOf="@+id/notifcationSettings"
+        android:layout_toEndOf="@+id/notifcationSettings"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp" />
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:textSize="13pt"
         android:text="@string/languagetext"
         android:id="@+id/textView6"
+        android:textColor="@color/md_black_1000"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
     <Button
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="18dp"
+        android:textColor="@color/md_white_1000"
         android:textSize="9pt"
+        android:background="@drawable/button_shap"
         android:text="English"
         android:id="@+id/button2"
-        android:layout_below="@+id/textView6"/>
+        android:layout_below="@+id/imageView13"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
     <Button
+        android:textStyle="bold"
+        android:textColor="@color/md_white_1000"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="22dp"
         android:textSize="9pt"
         android:text="العربية"
         android:id="@+id/button4"
-        android:layout_below="@+id/button2"/>
+        android:background="@drawable/button_shap"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
     <ImageView
-        android:layout_height="wrap_content"
-        android:layout_width="40dp"
         android:id="@+id/imageView13"
-        android:layout_toStartOf="@+id/textView6"
-        android:layout_toLeftOf="@+id/textView6"
-        app:srcCompat="@mipmap/translator"
-        android:layout_marginEnd="11dp"
-        android:layout_marginRight="11dp"
-        android:layout_centerVertical="true"/>
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/notifcationSettings"
+        android:layout_toStartOf="@+id/notifcationSettings"
+        app:srcCompat="@mipmap/translator1111" />
 
 </RelativeLayout>

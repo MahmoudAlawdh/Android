@@ -86,11 +86,6 @@ public class MyAppointments extends Fragment {
 
 
 
-
-
-
-
-
         lv.setAdapter(myv);
 
 

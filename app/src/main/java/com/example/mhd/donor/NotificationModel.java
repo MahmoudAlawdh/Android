@@ -19,9 +19,6 @@ public class NotificationModel {
         this.setTitle(title);
     }
 
-    public NotificationModel(int date, int description, String notifId, String status, String title){
-
-    }
 
 
     public String getDate() {
