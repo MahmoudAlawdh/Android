@@ -1,13 +1,120 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.mhd.donor.AboutUs">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="aboutus" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:fontFamily="serif"
+        android:text="About Us"
+        android:textAlignment="center"
+        android:textColor="@color/material_drawer_dark_background"
+
+        android:textSize="16pt"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:fontFamily="serif"
+        android:text="Our Mission"
+        android:textAlignment="center"
+        android:textColor="#ff0000"
+        android:textSize="12pt"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView28"
+        android:layout_alignLeft="@+id/textView32"
+        android:layout_alignStart="@+id/textView32" />
+
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To help member blood centers serve their communities."
+        android:textAlignment="center"
+        android:textSize="7pt"
+        android:textStyle="normal"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/textView29"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:text="Who We Help?"
+        android:fontFamily="serif"
+        android:textAlignment="center"
+        android:textColor="#ff0000"
+        android:textSize="12pt"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView30"
+        android:layout_alignLeft="@+id/textView29"
+        android:layout_alignStart="@+id/textView29" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doners"
+        android:fontFamily="serif"
+        android:textAlignment="center"
+        android:textColor="@color/md_black_1000"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView31"
+        android:layout_toLeftOf="@+id/textView28"
+        android:layout_toStartOf="@+id/textView28"
+        android:layout_marginTop="11dp" />
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="7pt"
+        android:textStyle="normal"
+        android:text="Blood donors are essential to the blood supply. Kuwait Blood Centers and our member blood centers rely on donors like you to help save lives."
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/textView32"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/GoDonate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="Donate"
+        android:background="@drawable/button_shap"
+        android:layout_below="@+id/textView33"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="By:
+Mahmoud
+Shikha
+Zainab Karam"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:layout_below="@+id/GoDonate"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

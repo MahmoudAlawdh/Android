@@ -30,12 +30,14 @@
         android:singleLine="true"
         android:text="Mahmoud"
         android:enabled="false"
+        android:fontFamily="serif"
         android:drawablePadding="10dp"
         android:layout_above="@+id/textEmail"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <EditText
+        android:fontFamily="serif"
         android:id="@+id/textCivil"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,6 +51,7 @@
         android:layout_alignParentStart="true" />
 
     <EditText
+        android:fontFamily="serif"
         android:id="@+id/textEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -62,6 +65,7 @@
         android:layout_alignParentStart="true" />
 
     <EditText
+        android:fontFamily="serif"
         android:id="@+id/textPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -75,6 +79,7 @@
         android:layout_alignParentStart="true" />
 
     <EditText
+        android:fontFamily="serif"
         android:id="@+id/textNationalty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -89,6 +94,7 @@
         android:layout_marginBottom="37dp" />
 
     <EditText
+        android:fontFamily="serif"
         android:id="@+id/textBirthDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -103,6 +109,7 @@
 
 
     <EditText
+        android:fontFamily="serif"
         android:id="@+id/textPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -117,6 +124,7 @@
 
 
     <EditText
+        android:fontFamily="serif"
         android:id="@+id/textBlood"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -135,8 +143,7 @@
         android:layout_height="40dp"
         android:background="@drawable/button_shap"
         android:text="Edit Profile"
-        android:textColor="@color/md_white_1000"
-        android:layout_marginBottom="36dp"
+        android:textColor="@color/md_black_1000"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -151,6 +158,7 @@
 
 
         <RadioButton
+            android:fontFamily="serif"
             android:id="@+id/radioFemale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -168,6 +176,7 @@
             />
 
         <RadioButton
+            android:fontFamily="serif"
             android:id="@+id/radioMale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

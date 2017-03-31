@@ -18,70 +18,131 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:typeface="sans"
-        android:layout_marginTop="45dp"
-        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
     <Spinner
         android:id="@+id/spinnerSelectDonationType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
         android:layout_below="@+id/text_donation"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="26dp"/>
+        android:layout_marginTop="13dp" />
 
     <EditText
         android:id="@+id/editTextDate"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableLeft="@mipmap/c"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Select Date"
         android:inputType="date"
-        android:drawablePadding="10dp"
+        android:layout_marginTop="13dp"
         android:layout_below="@+id/spinnerSelectDonationType"
-        android:layout_alignLeft="@+id/spinnerSelectDonationType"
-        android:layout_alignStart="@+id/spinnerSelectDonationType"
-        android:layout_marginTop="48dp"
-        android:layout_alignRight="@+id/spinnerSelectDonationType"
-        android:layout_alignEnd="@+id/spinnerSelectDonationType" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Spinner
         android:id="@+id/spinnerBranches"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="53dp"
-        android:layout_above="@+id/editTextTime"
-        android:layout_alignLeft="@+id/editTextTime"
-        android:layout_alignStart="@+id/editTextTime"
-        android:layout_alignRight="@+id/editTextTime"
-        android:layout_alignEnd="@+id/editTextTime" />
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/editTextDate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:id="@+id/editTextTime"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableLeft="@mipmap/clock"
+        android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Select Time"
         android:inputType="time"
-        android:layout_marginBottom="27dp"
-        android:drawablePadding="10dp"
         android:layout_above="@+id/confirmButton"
-        android:layout_alignLeft="@+id/editTextDate"
-        android:layout_alignStart="@+id/editTextDate"
-        android:layout_alignRight="@+id/editTextDate"
-        android:layout_alignEnd="@+id/editTextDate" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/confirmButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="42dp"
         android:text="Confirm"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="17dp" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Spare only"
+        android:textColor="#ff0000"
+        android:textAlignment="gravity"
+        android:textSize="8pt"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:layout_marginRight="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15 minutes"
+        android:textAlignment="gravity"
+        android:textSize="17pt"
+        android:textStyle="bold"
+        android:fontFamily="serif-monospace"
+        android:textColor="@color/material_drawer_dark_background"
+        android:layout_below="@+id/textView22"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="and SAVE"
+        android:textColor="#ff0000"
+        android:textAlignment="gravity"
+        android:textSize="8pt"
+        android:fontFamily="serif-monospace"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/textView23"
+        android:layout_alignRight="@+id/textView22"
+        android:layout_alignEnd="@+id/textView22" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="gravity"
+        android:textSize="17pt"
+        android:textStyle="bold"
+        android:fontFamily="serif-monospace"
+        android:text="3 lives"
+        android:textColor="@color/material_drawer_dark_background"
+        android:layout_below="@+id/textView24"
+        android:layout_alignRight="@+id/textView24"
+        android:layout_alignEnd="@+id/textView24" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="169dp"
+        android:layout_height="340dp"
+        android:layout_alignBottom="@+id/spinnerSelectDonationType"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:srcCompat="@mipmap/donationablooooood" />
+
 </RelativeLayout>

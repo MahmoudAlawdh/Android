@@ -34,7 +34,7 @@
         <activity android:name=".AfterDonation" />
         <activity android:name=".Register2Activity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".ForgetPasswordActivity"></activity>
+        <activity android:name=".ForgetPassActivity"></activity>
     </application>
 
 </manifest>

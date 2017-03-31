@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -31,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
 
         Button b = (Button)findViewById(R.id.Login);
         Button bsign = (Button) findViewById(R.id.Sign_up);
-        Button Forgetpassword = (Button) findViewById(R.id.FP);
+        TextView forget = (TextView) findViewById(R.id.FP);
 
         bsign.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,10 +92,11 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        Forgetpassword.setOnClickListener(new View.OnClickListener() {
+        forget.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(LoginActivity.this, ForgetPassActivity.class);
+                startActivity(intent);
             }
         });
     }

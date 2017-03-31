@@ -20,14 +20,12 @@ public class Share extends Fragment {
 
     ImageView twitter;
 
-    ImageView googleplus;
+
     ImageView whatsapp;
     ImageView Massge;
 
 
-    Intent twittershare;
 
-    Intent googleshare;
     Intent whatsappshare;
     Intent Massgeshare;
 
@@ -53,22 +51,7 @@ public class Share extends Fragment {
         });
 
 
-        googleplus = (ImageView) v.findViewById(R.id.imageView32);
-        googleplus.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                googleshare = new Intent(Intent.ACTION_SEND);
-                googleshare.setType("text/plain");
-                googleshare.setPackage("plus.google.com");
-                googleshare.putExtra(Intent.EXTRA_TEXT, "Share with ...");
-                try {
-                    startActivity(googleshare);
-                }catch (android.content.ActivityNotFoundException ex){
-                    Toast.makeText(getContext(), "asdf", Toast.LENGTH_SHORT).show();
-                }
 
-            }
-        });
 
         whatsapp = (ImageView) v.findViewById(R.id.imageViewwhatsapp);
         whatsapp.setOnClickListener(new View.OnClickListener() {
