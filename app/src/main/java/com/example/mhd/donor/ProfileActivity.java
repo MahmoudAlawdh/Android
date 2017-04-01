@@ -53,6 +53,7 @@ public class ProfileActivity extends AppCompatActivity {
             textblood.setText(myprofile.getString("bloodType"));
             textBirth.setText(myprofile.getString("birthDate"));
             textNationalty.setText(myprofile.getString("nationality"));
+            textPhone.setText(myprofile.getString("phoneNumber"));
             if(myprofile.getString("gender").equals("F")) {
                 radioFmale.setChecked(true);
             }
