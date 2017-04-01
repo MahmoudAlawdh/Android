@@ -6,18 +6,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="We would like to express our thanks and gratitude for your cooperation with us by offering the blood bank this meaningful gift to all patients in Kuwait Hospitals. To make your donation valuable for transfusion please follow these instructions:
-
-    1- Sleep at least 6 hours on the day before donation.
-    2- Be in good health and avoid certain medications such as:
-    a.Aspirin, or products containing aspirin, for at least 5 days before your appointment
-    b.Analgesic non - Steroidal, Anti- Inflammatory medications ( such as Ibuprofen ) for 48 hours before your appointment
-    c.Antibiotics for at least seven days before your appointment
-    d.If you are taking any other medications, please inform the physician
-
-    3- Drink plenty of fluids three to four hours before donating platelets.
-    4- Eat healthy light food (fat free), like fruits and vegetables, and do not skip a meal on the day before donation.
-    "
+        android:text="@string/before1"
         android:textAlignment="center"
 
         android:layout_alignParentTop="true"

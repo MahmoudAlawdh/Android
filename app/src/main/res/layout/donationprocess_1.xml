@@ -8,10 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="52dp"
-        android:text="How long does it take?
-1- Whole Blood Donation: it takes about 10 minutes
-2- Double red blood cells donation: it takes about 45 minutes
-3- Platelets donation; donation 60 - 9- minutes depending on the height and eight of the donor, platelet count and Hematocrit level"
+        android:text="@string/donationprocess1"
         android:textAlignment="center"
         android:layout_above="@+id/textView9"
         android:layout_alignParentLeft="true"
@@ -20,10 +17,7 @@
     <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="How Often can I give blood?
-1- Whole Blood Donation: every 8 weeks up to 6 times per year
-2- Double red blood cells donation: every 16 weeks up to 3 times per year
-3- Platelets donation: every 2 weeks up to 24 times per year"
+    android:text="@string/donationprocess2"
     android:id="@+id/textView9"
         android:layout_marginBottom="201dp"
         android:textAlignment="center"

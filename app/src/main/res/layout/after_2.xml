@@ -7,20 +7,7 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="
-8- If you noticed bruises on vein puncture site, follow these steps:
-Day 1: Wrap ice in a clean moist cloth and apply to the site for 15-20 minutes, 3-4 times during the day.
-Day 2,3 and 4: Apply a warm moist cloth to the site for 15-20 minutes, 3-4 times every day , you will notice color changes of the bruised area in the next   10 days.
-     9-   If you experience dizziness or lightheadedness or feel like you are going to faint, sit
-down with your head between your knees or lie down with your legs elevated as soon as possible to avoid a potential fall and/or injury. Remain in this position until the condition improves . If symptoms persist, return to the blood bank or seek medical advice.
-    10-  As a part of our routine procedure, the blood bank will test your donation to detect any   blood transmitted infections.
-  11- In some instances when the infection is in its early phase (window period), our routine
-          tests may fail to reveal the presence of such infection. Therefore, if you have any
-          doubts about the safety of your blood, please call the Central Blood Bank at the
-          number provided, as soon as possible and tell the physician in charge that you don’t
-          want your donation to be used for transfusion without the need to explain or to give
-          any reasons. All information provided by you will be confidential.
-"
+        android:text="@string/after2"
 
         android:textAlignment="center"
 

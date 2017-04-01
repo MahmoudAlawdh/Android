@@ -6,18 +6,7 @@
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="How to be ready for donation day?
-
-1- Sleeping 6-8 hours at least on the day befor the donation.
-2-  Drink plenty of fluids
-3- Eating Healthy snacks (fat free) in the day of donation
-4- You must be in good health , and in case of taking drugs that can affect the donation process please consult the doctor
-5- For women: Not to be pregnant or during the menstrual cycle, it should be at least 6 weeks after giving birth
-6- Consult the doctor if you have any chronic illness or if you had an surgery that might affect your health or affect the blood.
-7- You must wait at least three days after any procedure with your teeth before donating
-8- Please inform your doctor if you had any blood transfusion in the past
-9- Please bring your original Civil Id to be valid in the blood donation day
-"
+        android:text="@string/canI2"
      android:textAlignment="center"
 
 

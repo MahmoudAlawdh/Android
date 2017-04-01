@@ -7,21 +7,7 @@
         android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Who can Donate blood?
-1- Healthy donors whom ages between 17 - 70 Years old
-2- Citizens or residents who have valid residency
-3- Donor’s weight shall be  50 Kg
-
-How do i need to prepare for the day of donation?
- 1- Sleep at least 6-8 hours on the night before the day of donation
- 2- Drink plenty of fluids
- 3- Have healthy light meals (fat free) on the day of donation
- 4- Be in the good health and consult the physician if you are taking any medications that       may interfere with blood donation such as antibiotics or any of the medications on the medications on the medication deferral list (Attached)
-5- Consults the physician if you have any chronic condition or surgery that may affect the your health or affect the safety of blood
-6- Females should not be pregnant nor menstruating, and should wait at least 6 weeks after delivery
-7- You should wait at least 3 days after any dental procedure, before donating blood
-8- Please inform the physician if you had blood transfusion before.
-"
+        android:text="@string/donationprocess3"
         android:textAlignment="center"
         android:textStyle="normal"
 

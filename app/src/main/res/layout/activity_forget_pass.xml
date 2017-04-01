@@ -29,7 +29,7 @@
         android:layout_below="@+id/fptoolbar"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="47dp"
-        android:text="Forget Your Password?"
+        android:text="@string/foregtPassButten"
         android:textAlignment="center"
         android:textStyle="bold"
         android:textSize="14pt"
@@ -43,7 +43,7 @@
         android:layout_marginTop="30dp"
         android:drawableLeft="@mipmap/message111"
         android:drawablePadding="10dp"
-        android:text="Please enter your email here"
+        android:text="@string/enteryouremail"
         android:textAlignment="gravity"
         android:textSize="10pt"
         android:layout_below="@+id/textView20"
@@ -52,7 +52,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Your Email"
+        android:hint="@string/enterEmail"
         android:layout_below="@+id/textView21"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -68,7 +68,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp"
         android:background="@drawable/button_shap"
-        android:text="Send"
+        android:text="@string/send"
         android:textSize="8pt"
         />
 

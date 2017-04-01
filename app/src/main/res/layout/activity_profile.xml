@@ -142,7 +142,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@drawable/button_shap"
-        android:text="Edit Profile"
+        android:text="@string/edit"
         android:textColor="@color/md_black_1000"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"

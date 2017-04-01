@@ -29,7 +29,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="13dp"
         android:ems="10"
-        android:hint="Email"
+        android:hint="@string/enterEmail"
         android:drawableLeft="@mipmap/closeeenvelope"
         android:inputType="textEmailAddress"
         android:drawablePadding="10dp"
@@ -45,7 +45,7 @@
         android:layout_centerVertical="true"
         android:drawableLeft="@mipmap/padlock"
         android:ems="10"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:drawablePadding="10dp"
         />

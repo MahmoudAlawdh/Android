@@ -6,22 +6,7 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="5- On the day of donation, your breakfast shall include: Toast, Jam and Honey, Biscuits without cream.
-6- We also suggest that you increase your consumption of Calcium-rich foods (dairy products) or take a Calcium supplement the evening before your donation and also and also the morning of your donation .
-7- Wear comfortable clothes with sleeves that can be easily rolled up above the elbow.
-8- Apheresis Donation procedure usually takes 60 - 90 minutes, so please go to toilet just before starting donation to avoid interruption of the procedure
-9- Refrain from smoking for at least 30 minutes before donation
-10- Bring your Civil ID with you on the day of the donation
-11- Accuracy and honesty are essential in answering the donor history questionnaire for the safety of blood. All information provided by you will be handled in privacy.
-
-Platelet transfusion is a lifesaving medical treatment for Cancer patients, organ or bone marrow transplant patients, victims of traumatic injuries, and patients undergoing open heart surgeries
-
-“ 70 minutes of your time once every month can save one of these patients”
-“Please help by being a regular platelet donor”
-
-Don’t forget to take appointment for your next donation
-Thank you
-"
+        android:text="@string/before2"
         android:textAlignment="center"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
