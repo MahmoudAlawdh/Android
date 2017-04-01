@@ -37,11 +37,6 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
 
-
-
-
-
-
         fm.beginTransaction()
                 .replace(R.id.Layout,f.getMakeDonations()).commit();
         try {

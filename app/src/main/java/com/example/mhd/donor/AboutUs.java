@@ -28,7 +28,8 @@ Button donateGo;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
+        final FragmentM f = FragmentM.getInstance();
+        final FragmentManager fm=getActivity().getSupportFragmentManager();
         View v = inflater.inflate(R.layout.fragment_about_us, container, false);
 
         donateGo = (Button) v.findViewById(R.id.GoDonate);
@@ -36,6 +37,8 @@ Button donateGo;
             @Override
             public void onClick(View v) {
 
+                fm.beginTransaction()
+                        .replace(R.id.Layout,f.getMakeDonations()).commit();
             }
         });
 
