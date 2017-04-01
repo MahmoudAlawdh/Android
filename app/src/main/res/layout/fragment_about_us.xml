@@ -93,25 +93,15 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true" />
 
-    <Button
-        android:id="@+id/GoDonate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="31dp"
-        android:text="@string/donate"
-        android:background="@drawable/button_shap"
-        android:layout_below="@+id/textView33"
-        android:layout_centerHorizontal="true" />
-
     <TextView
         android:id="@+id/textView34"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="87dp"
         android:text="@string/members"
         android:textAlignment="center"
         android:textStyle="italic"
-        android:layout_below="@+id/GoDonate"
+        android:layout_below="@+id/textView33"
         android:layout_centerHorizontal="true" />
 
 

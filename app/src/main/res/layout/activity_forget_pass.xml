@@ -50,15 +50,18 @@
         android:layout_centerHorizontal="true" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:id="@+id/editText"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:hint="@string/enterEmail"
-        android:layout_below="@+id/textView21"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="21dp"
+        android:layout_below="@+id/textView21"
+        android:layout_marginEnd="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="19dp"
         android:background="@drawable/border_edit"
-        android:id="@+id/editText" />
+        android:hint="@string/enterEmail"
+        android:layout_alignRight="@+id/textView21"
+        android:layout_alignStart="@+id/textView21" />
 
     <Button
         android:id="@+id/button3"
