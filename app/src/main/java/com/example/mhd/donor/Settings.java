@@ -48,7 +48,8 @@ public class Settings extends Fragment {
                 Configuration conf =resEnglish.getConfiguration();
                 conf.locale = locale;
                 resEnglish.updateConfiguration(conf, dm);
-
+                Intent refresh = new Intent(getActivity(),HomeActivity.class);
+                startActivity(refresh);
 
 
 
@@ -65,7 +66,8 @@ public class Settings extends Fragment {
                 Configuration conf1 = resArabic.getConfiguration();
                 conf1.locale = locale;
                 resArabic.updateConfiguration(conf1, dm1);
-
+                Intent refresh = new Intent(getActivity(),HomeActivity.class);
+                startActivity(refresh);
             }
         });
 
