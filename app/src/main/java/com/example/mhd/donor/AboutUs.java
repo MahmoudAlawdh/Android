@@ -32,15 +32,7 @@ Button donateGo;
         final FragmentManager fm=getActivity().getSupportFragmentManager();
         View v = inflater.inflate(R.layout.fragment_about_us, container, false);
 
-        donateGo = (Button) v.findViewById(R.id.GoDonate);
-        donateGo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                fm.beginTransaction()
-                        .replace(R.id.Layout,f.getMakeDonations()).commit();
-            }
-        });
 
         return v;
     }
