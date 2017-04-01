@@ -136,7 +136,7 @@ public class MakeDonations extends Fragment {
             }
         });
 
-
+        Toast.makeText(getActivity(), "yes", Toast.LENGTH_SHORT).show();
         return vv;
 
     }

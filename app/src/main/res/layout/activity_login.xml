@@ -33,6 +33,8 @@
         android:drawableLeft="@mipmap/closeeenvelope"
         android:inputType="textEmailAddress"
         android:drawablePadding="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         />
 
     <EditText
@@ -48,6 +50,8 @@
         android:hint="@string/password"
         android:inputType="textPassword"
         android:drawablePadding="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         />
 
     <TextView
@@ -72,7 +76,9 @@
         android:background="@drawable/button_shap"
         android:layout_below="@+id/FP"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"/>
 
     <TextView
         android:id="@+id/FP"
@@ -119,6 +125,8 @@
         android:layout_below="@+id/textView9"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="13dp" />
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"/>
 
 </RelativeLayout>
