@@ -23,6 +23,9 @@ import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class HomeActivity extends AppCompatActivity {
     final FragmentM f = FragmentM.getInstance();
     final FragmentManager fm=getSupportFragmentManager();
@@ -33,24 +36,21 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        SharedPreferences preferences=getSharedPreferences(Filee,MODE_PRIVATE);
-        String email=preferences.getString(profile,"notfound");
-        Toast.makeText(this, email, Toast.LENGTH_SHORT).show();
-
-
-
-
 
         fm.beginTransaction()
                 .replace(R.id.Layout,f.getMakeDonations()).commit();
-        Materialdrawer(HomeActivity.this);
+        try {
+            Materialdrawer(HomeActivity.this);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
     }
 
     @Override
     public void onBackPressed() {
     }
-    public void Materialdrawer(final Context c){
+    public void Materialdrawer(final Context c) throws JSONException {
 
         Toolbar TB = (Toolbar) findViewById(R.id.Hometoolbar);
         final Drawable MakeDonation = new IconicsDrawable(this)
@@ -84,13 +84,15 @@ public class HomeActivity extends AppCompatActivity {
         PrimaryDrawerItem item9 = new PrimaryDrawerItem().withIdentifier(1).withIcon(Settings).withName(R.string.Settings);
         PrimaryDrawerItem item10 = new PrimaryDrawerItem().withIdentifier(1).withIcon(Logout).withName(R.string.Logout);
 
-
-
+        SharedPreferences preferences=getSharedPreferences(Filee,MODE_PRIVATE);
+        String p=preferences.getString(profile,"notfound");
+        Toast.makeText(this, p, Toast.LENGTH_SHORT).show();
+        JSONObject myprofile = new JSONObject(p);
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
                 .withHeaderBackground(R.mipmap.navi)
                 .addProfiles(
-                        new ProfileDrawerItem().withName("Mike Penz").withEmail("mikepenz@gmail.com")
+                        new ProfileDrawerItem().withName(myprofile.getString("firstName")+" "+myprofile.getString("lastName")).withEmail(myprofile.getString("email"))
                 )
                 .withOnAccountHeaderListener(new AccountHeader.OnAccountHeaderListener() {
                     @Override
