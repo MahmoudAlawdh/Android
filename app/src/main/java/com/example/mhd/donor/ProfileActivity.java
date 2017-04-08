@@ -1,5 +1,6 @@
 package com.example.mhd.donor;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,7 +29,7 @@ public class ProfileActivity extends AppCompatActivity {
     boolean lock=true;
     public final static String Filee ="donor";
     public final static String profile ="profile";
-
+    JSONObject myprofile;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +37,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 
         SharedPreferences preferences = getSharedPreferences(Filee, MODE_PRIVATE);
-        String p = preferences.getString(profile, "notfound");
+        final String p = preferences.getString(profile, "notfound");
         Toast.makeText(this, p, Toast.LENGTH_SHORT).show();
 
         final EditText textname = (EditText) findViewById(R.id.textName);
@@ -51,7 +52,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         final EditText textPhone = (EditText) findViewById(R.id.textPhone);
         try {
-            JSONObject myprofile = new JSONObject(p);
+            myprofile = new JSONObject(p);
             textname.setText(myprofile.getString("firstName") + " " + myprofile.getString("lastName"));
             textemail.setText(myprofile.getString("email"));
             textCivil.setText(myprofile.getString("civilId"));
@@ -89,8 +90,74 @@ public class ProfileActivity extends AppCompatActivity {
 
                 if (lock == true) {
                     editbutton.setText("Update");
+                    lock = !lock;
                 } else {
                     editbutton.setText("EDIT PROFILE");
+
+
+
+
+
+                    final RequestQueue queue= Connection.getInstance().getRequestQueue(ProfileActivity.this);
+                    try {
+
+                        JSONObject req = new JSONObject();
+                        String names[] = textname.getText().toString().split(" ");
+                        req.put("firstName",names[0]);
+                        req.put("lastName",names[1]);
+                        req.put("email",textemail.getText().toString());
+                        req.put("civilId",textCivil.getText().toString());
+                        req.put("password",textPassword.getText().toString());
+                        req.put("bloodType",textblood.getText().toString());
+                        req.put("birthDate",textBirth.getText().toString());
+                        req.put("nationality",textNationalty.getText().toString());//textNationalty.setText(myprofile.getString("nationality"));
+                        req.put("phoneNumber",textPhone.getText().toString());//textPhone.setText(myprofile.getString("phoneNumber"));
+                        req.put("donorId",myprofile.getInt("donorId"));
+                        if (radioFmale.isChecked()) {
+                            req.put("gender","F");
+                        } else {
+                            req.put("gender","M");
+                        }
+                        req.put("deleted",0);
+                        req.put("status",true);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        String url="http://34.196.107.188:8081/MhealthWeb/webresources/donor/"+myprofile.getString("donorId");
+                        Toast.makeText(ProfileActivity.this, req.toString(), Toast.LENGTH_SHORT).show();
+                        System.out.println(req.toString());
+                        final JsonObjectRequest Jr = new JsonObjectRequest(Request.Method.PUT, url, req, new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+
+                                    Toast.makeText(ProfileActivity.this, "Updated", Toast.LENGTH_SHORT).show();
+
+                            }
+                        }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                Toast.makeText(ProfileActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                        queue.add(Jr);
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                lock = !lock;
                 }
             }
         });
