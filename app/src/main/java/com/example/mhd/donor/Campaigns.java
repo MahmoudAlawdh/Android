@@ -53,7 +53,7 @@ public class Campaigns extends Fragment {
         lv.setAdapter(myv);
         //   llate = 29.3640416;
         // llong = 47.9814006;
-        String url="http://34.196.107.188:8080/mHealthWS/ws/newcallfordonation";
+        String url="http://34.196.107.188:8081/MhealthWeb/webresources/callfordonation";
 
         final RequestQueue queue= Connection.getInstance().getRequestQueue(getContext());
 

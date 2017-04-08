@@ -13,6 +13,12 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -29,8 +35,8 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
 
-        SharedPreferences preferences=getSharedPreferences(Filee,MODE_PRIVATE);
-        String p=preferences.getString(profile,"notfound");
+        SharedPreferences preferences = getSharedPreferences(Filee, MODE_PRIVATE);
+        String p = preferences.getString(profile, "notfound");
         Toast.makeText(this, p, Toast.LENGTH_SHORT).show();
 
         final EditText textname = (EditText) findViewById(R.id.textName);
@@ -46,7 +52,7 @@ public class ProfileActivity extends AppCompatActivity {
         final EditText textPhone = (EditText) findViewById(R.id.textPhone);
         try {
             JSONObject myprofile = new JSONObject(p);
-            textname.setText(myprofile.getString("firstName")+" "+myprofile.getString("lastName"));
+            textname.setText(myprofile.getString("firstName") + " " + myprofile.getString("lastName"));
             textemail.setText(myprofile.getString("email"));
             textCivil.setText(myprofile.getString("civilId"));
             textPassword.setText(myprofile.getString("password"));
@@ -54,10 +60,9 @@ public class ProfileActivity extends AppCompatActivity {
             textBirth.setText(myprofile.getString("birthDate"));
             textNationalty.setText(myprofile.getString("nationality"));
             textPhone.setText(myprofile.getString("phoneNumber"));
-            if(myprofile.getString("gender").equals("F")) {
+            if (myprofile.getString("gender").equals("F")) {
                 radioFmale.setChecked(true);
-            }
-            else{
+            } else {
                 radioMale.setChecked(true);
             }
 
@@ -65,7 +70,7 @@ public class ProfileActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        final Button editbutton = (Button)findViewById(R.id.editbutton);
+        final Button editbutton = (Button) findViewById(R.id.editbutton);
         editbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,25 +87,14 @@ public class ProfileActivity extends AppCompatActivity {
                 radioFmale.setEnabled(lock);
                 radioMale.setEnabled(lock);
 
-                if(lock == true){
+                if (lock == true) {
                     editbutton.setText("Update");
-                }
-                else{
+                } else {
                     editbutton.setText("EDIT PROFILE");
                 }
-                lock=!lock;
-
             }
         });
-
-
-
-
-
-
-
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         this.finish();

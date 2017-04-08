@@ -50,7 +50,7 @@ public class MyDonations extends Fragment {
 
         final ArrayList<MyAppointmentModel> model= new ArrayList<>();
         final MyAppointmentAdapter myv = new MyAppointmentAdapter(model,getActivity());
-        String url="http://34.196.107.188:8080/mHealthWS/ws/donationrecord";
+        String url="http://34.196.107.188:8081/MhealthWeb/webresources/donationrecord";
 
         final RequestQueue queue= Connection.getInstance().getRequestQueue(getContext());
 
