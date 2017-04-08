@@ -79,9 +79,9 @@
         android:textAlignment="center"
         android:layout_marginRight="13dp"
         android:layout_marginEnd="13dp"
-        android:layout_above="@+id/imageButton2"
-        android:layout_toLeftOf="@+id/imageView14"
-        android:layout_toStartOf="@+id/imageView14"
+        android:layout_above="@+id/ABminus"
+        android:layout_toLeftOf="@+id/Aplus"
+        android:layout_toStartOf="@+id/Aplus"
         android:layout_marginBottom="15dp" />
 
     <Button
@@ -98,50 +98,50 @@
         android:layout_marginRight="80dp"/>
 
     <ImageView
-        android:id="@+id/imageButton2"
+        android:id="@+id/ABminus"
         android:layout_width="90dp"
         android:layout_height="wrap_content"
 
         android:background="@android:color/transparent"
         android:backgroundTint="@color/common_google_signin_btn_text_dark_default"
         app2:srcCompat="@mipmap/abb"
-        android:layout_above="@+id/imageButton8"
-        android:layout_alignLeft="@+id/imageButton8"
-        android:layout_alignStart="@+id/imageButton8" />
+        android:layout_above="@+id/Oplus"
+        android:layout_alignLeft="@+id/Oplus"
+        android:layout_alignStart="@+id/Oplus" />
 
     <ImageView
-        android:id="@+id/imageButton5"
+        android:id="@+id/Aminus"
         android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         app2:srcCompat="@mipmap/aa"
         android:layout_below="@+id/textView15"
-        android:layout_toRightOf="@+id/imageButton10"
-        android:layout_toEndOf="@+id/imageButton10" />
+        android:layout_toRightOf="@+id/ABplus"
+        android:layout_toEndOf="@+id/ABplus" />
 
     <ImageView
-        android:id="@+id/imageButton6"
+        android:id="@+id/Bplus"
         android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         app2:srcCompat="@mipmap/b"
-        android:layout_below="@+id/imageButton5"
-        android:layout_alignLeft="@+id/imageView14"
-        android:layout_alignStart="@+id/imageView14" />
+        android:layout_below="@+id/Aminus"
+        android:layout_alignLeft="@+id/Aplus"
+        android:layout_alignStart="@+id/Aplus" />
 
     <ImageView
-        android:id="@+id/imageButton7"
+        android:id="@+id/Bminus"
         android:layout_width="90dp"
         android:layout_height="wrap_content"
 
+        android:layout_below="@+id/Aminus"
+        android:layout_toEndOf="@+id/Ominus"
+        android:layout_toRightOf="@+id/Ominus"
         android:background="@android:color/transparent"
-        app2:srcCompat="@mipmap/bb"
-        android:layout_below="@+id/imageButton5"
-        android:layout_toRightOf="@+id/imageButton9"
-        android:layout_toEndOf="@+id/imageButton9" />
+        app2:srcCompat="@mipmap/bb" />
 
     <ImageView
-        android:id="@+id/imageButton8"
+        android:id="@+id/Oplus"
         android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
@@ -152,32 +152,32 @@
         android:layout_marginBottom="17dp" />
 
     <ImageView
-        android:id="@+id/imageButton9"
+        android:id="@+id/Ominus"
         android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         app2:srcCompat="@mipmap/oo"
-        android:layout_below="@+id/imageButton2"
-        android:layout_toRightOf="@+id/imageButton8"
-        android:layout_toEndOf="@+id/imageButton8" />
+        android:layout_below="@+id/ABminus"
+        android:layout_toRightOf="@+id/Oplus"
+        android:layout_toEndOf="@+id/Oplus" />
 
     <ImageView
-        android:id="@+id/imageButton10"
+        android:id="@+id/ABplus"
         android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         app2:srcCompat="@mipmap/ab"
         android:layout_below="@+id/textView15"
-        android:layout_toRightOf="@+id/imageButton8"
-        android:layout_toEndOf="@+id/imageButton8" />
+        android:layout_toRightOf="@+id/Oplus"
+        android:layout_toEndOf="@+id/Oplus" />
 
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/Aplus"
         android:layout_width="90dp"
         android:layout_height="wrap_content"
         app2:srcCompat="@mipmap/a"
-        android:layout_above="@+id/imageButton6"
-        android:layout_toRightOf="@+id/imageButton5"
-        android:layout_toEndOf="@+id/imageButton5" />
+        android:layout_above="@+id/Bplus"
+        android:layout_toRightOf="@+id/Aminus"
+        android:layout_toEndOf="@+id/Aminus" />
 
 </RelativeLayout>
