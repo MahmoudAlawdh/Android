@@ -109,4 +109,13 @@
         android:text="Feb 25, 2017"
         android:textColor="@color/md_black_1000"
         android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/campaignShare"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="?attr/actionModeShareDrawable" />
 </RelativeLayout>
