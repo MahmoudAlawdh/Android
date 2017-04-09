@@ -1,12 +1,15 @@
 package com.example.mhd.donor;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mikepenz.community_material_typeface_library.CommunityMaterial;
 import com.mikepenz.fontawesome_typeface_library.FontAwesome;
@@ -53,7 +56,21 @@ public class CampaignAdapter extends BaseAdapter {
         TextView Name = (TextView) v.findViewById(R.id.Name);
         TextView StartDate = (TextView)v.findViewById(R.id.StartDate);
         TextView EndDate = (TextView)v.findViewById(R.id.EndDate);
+        ImageView share = (ImageView)v.findViewById(R.id.campaignShare);
         final CampaignModel m = model.get(position);
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Massgeshare = new Intent(Intent.ACTION_SEND);
+                Massgeshare.setType("texet/plain");
+                Massgeshare.putExtra(Intent.EXTRA_SUBJECT, "Donation ");
+                String appLink = m.getName();
+                Massgeshare.putExtra(Intent.EXTRA_TEXT,"am Sharing the campaign :"+appLink);
+                v.getContext().startActivity(Intent.createChooser(Massgeshare,"Share Via"));
+                Toast.makeText(v.getContext(), "asdf", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         Name.setText(" "+m.getName());
 

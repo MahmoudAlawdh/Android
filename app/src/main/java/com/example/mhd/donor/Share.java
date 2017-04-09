@@ -60,7 +60,7 @@ public class Share extends Fragment {
                 whatsappshare = new Intent(Intent.ACTION_SEND);
                 whatsappshare.setType("text/plain");
                 whatsappshare.setPackage("com.whatsapp");
-                whatsappshare.putExtra(Intent.EXTRA_TEXT, "Share with ...");
+                whatsappshare.putExtra(Intent.EXTRA_TEXT, "www.mHealth.com/donor/download");
                 try {
                     startActivity(whatsappshare);
                 }catch (android.content.ActivityNotFoundException ex){
@@ -76,7 +76,7 @@ public class Share extends Fragment {
                 Massgeshare = new Intent(Intent.ACTION_SEND);
                 Massgeshare.setType("texet/plain");
                 Massgeshare.putExtra(Intent.EXTRA_SUBJECT, "Donation ");
-                String appLink = "mHealth.com";
+                String appLink = "www.mHealth.com/donor/download";
                 Massgeshare.putExtra(Intent.EXTRA_TEXT,"To Donate Go to the Website "+appLink);
                 startActivity(Intent.createChooser(Massgeshare,"Share Via"));
             }

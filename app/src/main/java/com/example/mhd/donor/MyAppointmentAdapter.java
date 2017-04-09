@@ -1,15 +1,20 @@
 package com.example.mhd.donor;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.mikepenz.community_material_typeface_library.CommunityMaterial;
 import com.mikepenz.iconics.IconicsDrawable;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -49,8 +54,20 @@ public class MyAppointmentAdapter extends BaseAdapter {
         TextView Date = (TextView)v.findViewById(R.id.Date);
         TextView Bloodtype = (TextView)v.findViewById(R.id.BloodType);
         TextView Destination = (TextView)v.findViewById(R.id.Destination);
-
+        ImageView share = (ImageView) v.findViewById(R.id.myappointmentShare);
         final MyAppointmentModel m = model.get(position);
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Massgeshare = new Intent(Intent.ACTION_SEND);
+                Massgeshare.setType("texet/plain");
+                Massgeshare.putExtra(Intent.EXTRA_SUBJECT, "Donation ");
+                String appLink = m.getDonationDestination();
+                Massgeshare.putExtra(Intent.EXTRA_TEXT,"Am donating blood to "+appLink);
+                v.getContext().startActivity(Intent.createChooser(Massgeshare,"Share Via"));
+            }
+        });
+
 
 
         Date.setText(" "+m.getDDate());

@@ -2,11 +2,14 @@ package com.example.mhd.donor;
 
 import android.app.Activity;
 import android.app.Notification;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -46,14 +49,24 @@ public class NotificationAdapter extends BaseAdapter {
         TextView Date = (TextView)v.findViewById(R.id.date_noti111111);
         TextView title = (TextView)v.findViewById(R.id.title_noti111111);
         TextView Destination = (TextView)v.findViewById(R.id.desc_noti11111);
-
+        ImageView share = (ImageView)v.findViewById(R.id.notificationShare);
         final NotificationModel m = model.get(position);
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent Massgeshare = new Intent(Intent.ACTION_SEND);
+                Massgeshare.setType("texet/plain");
+                Massgeshare.putExtra(Intent.EXTRA_SUBJECT, "Donation ");
+                String appLink = m.getTitle();
+                Massgeshare.putExtra(Intent.EXTRA_TEXT,"Am Sharing this notification:"+appLink);
+                v.getContext().startActivity(Intent.createChooser(Massgeshare,"Share Via"));
+            }
+        });
 
+        Date.setText(" Date: "+m.getTitle());
+        title.setText(" Title: "+m.getTitle());
 
-        Date.setText(" "+m.getTitle());
-        title.setText(" "+m.getTitle());
-
-        Destination.setText(""+m.getTitle());
+        Destination.setText(" Description: "+m.getTitle());
 
 
         return v;
