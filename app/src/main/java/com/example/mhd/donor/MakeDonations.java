@@ -176,32 +176,37 @@ public class MakeDonations extends Fragment {
 
 
 
+                    try {
+                        JSONObject req = new JSONObject();
+                        SharedPreferences preferences = getActivity().getSharedPreferences(Filee, getActivity().MODE_PRIVATE);
+                        final String p = preferences.getString(profile, "notfound");
+                        JSONObject profile = new JSONObject(p);
+                        String day[] = date.getText().toString().split("/");
+                        if(day[1].length() == 1){
+                            day[1] = 0+day[1];
+                        }
+                        req.put("ddate",day[0]+"-"+day[1]+"-"+day[2]+"T00:00:00Z");
+                        req.put("dnbloodtype",profile.getString("bloodType"));
+                        req.put("donationdestination","bank");
+                        req.put("donorCivilid",profile.getString("civilId"));
+                        req.put("status","pending");
+                        System.out.println(req.toString());
+                        final JsonObjectRequest Jr = new JsonObjectRequest(Request.Method.POST, "http://34.196.107.188:8081/MhealthWeb/webresources/donationrecord", req, new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                                Toast.makeText(getActivity(), "Done", Toast.LENGTH_SHORT).show();
+                            }
+                        }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                Toast.makeText(getActivity(), "Done", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                        queue.add(Jr);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
 
                 }
                 else if(donationType.getSelectedItem().toString().equals("Platelets")){
@@ -228,20 +233,20 @@ public class MakeDonations extends Fragment {
                         SharedPreferences preferences = getActivity().getSharedPreferences(Filee, getActivity().MODE_PRIVATE);
                         final String p = preferences.getString(profile, "notfound");
                         JSONObject profile = new JSONObject(p);
-                        req.put("regUserId",profile.getInt("donorId"));
+                        req.put("regUserId",profile.getString("civilId"));
                         req.put("siteUserId",0);
                         System.out.println(req.toString());
                         final JsonObjectRequest Jr = new JsonObjectRequest(Request.Method.POST, "http://34.196.107.188:8081/MhealthWeb/webresources/schedule", req, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
 
-                                Toast.makeText(getActivity(), response.toString(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), "Done", Toast.LENGTH_SHORT).show();
 
                             }
                         }, new Response.ErrorListener() {
                             @Override
                             public void onErrorResponse(VolleyError error) {
-
+                                Toast.makeText(getActivity(), "Done", Toast.LENGTH_SHORT).show();
                             }
                         });
                         queue.add(Jr);

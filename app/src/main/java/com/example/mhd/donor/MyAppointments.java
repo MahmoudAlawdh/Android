@@ -61,10 +61,18 @@ public class MyAppointments extends Fragment {
             public void onResponse(String response) {
                 try {
                     JSONArray a = new JSONArray(response);
-
+                    SharedPreferences preferences = getActivity().getSharedPreferences(Filee, getActivity().MODE_PRIVATE);
+                    final String p = preferences.getString(profile, "notfound");
+                    JSONObject profile = new JSONObject(p);
                     for(int i = 0 ; i < a.length() ; i++){
                         JSONObject o = a.getJSONObject(i);
-                        if( o.getString("status").toLowerCase().equals("pending") )  {
+
+
+                        String civilId = profile.getString("civilId");
+                        System.out.println(profile.toString());
+
+
+                        if( o.getString("status").toLowerCase().equals("pending")  && civilId.equals(o.getInt("donorCivilid")+"")    )  {
                             model.add(new MyAppointmentModel(o.getInt("donationId"), o.getInt("donorCivilid"), fixdate(o.getString("ddate")), o.getString("donationdestination"), o.getString("dnbloodtype")));
                             myv.notifyDataSetChanged();
                         }

@@ -60,12 +60,17 @@ public class MyDonations extends Fragment {
                 try {
                     JSONArray a = new JSONArray(response);
 
+                    SharedPreferences preferences = getActivity().getSharedPreferences(Filee, getActivity().MODE_PRIVATE);
+                    final String p = preferences.getString(profile, "notfound");
+                    JSONObject profile = new JSONObject(p);
+
                     for(int i = 0 ; i < a.length() ; i++){
                         JSONObject o = a.getJSONObject(i);
-            //            if( o.getString("status").toLowerCase().equals("accepted") ) {
+                        String civilId = profile.getString("civilId");
+                        if( o.getString("status").toLowerCase().equals("accepted") &&  civilId.equals(o.getInt("donorCivilid")+"")) {
                             model.add(new MyAppointmentModel(o.getInt("donationId"), o.getInt("donorCivilid"), fixdate(o.getString("ddate")), o.getString("donationdestination"), o.getString("dnbloodtype")));
                             myv.notifyDataSetChanged();
-             //           }
+                        }
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
