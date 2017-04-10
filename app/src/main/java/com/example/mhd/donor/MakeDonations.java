@@ -69,6 +69,19 @@ public class MakeDonations extends Fragment {
         });
 
         final Spinner donationType = (Spinner) vv.findViewById(R.id.spinnerSelectDonationType);
+        final Spinner peroids = (Spinner) vv.findViewById(R.id.spinnerperiod);
+
+        final ArrayList<String> peroidsmodel = new ArrayList<>();
+        peroidsmodel.add("Select peroid");
+        peroidsmodel.add("8 AM - 10 AM");
+        peroidsmodel.add("10 AM - 12 PM");
+        peroidsmodel.add("12 PM - 2 PM");
+        peroidsmodel.add("2 PM - 4 PM");
+        peroidsmodel.add("4 PM - 6 PM");
+        final ArrayAdapter<String> peroidadapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, peroidsmodel);
+        peroids.setAdapter(peroidadapter);
+
+
         final ArrayList<String> model = new ArrayList<>();
 
         model.add("Select Donation Type");
@@ -138,7 +151,7 @@ public class MakeDonations extends Fragment {
 
                         Toast.makeText(getActivity(), year + "/" + month + "/" + dayOfMonth, Toast.LENGTH_SHORT).show();
 
-                        date.setText(year + "/" + month + "/" + dayOfMonth);
+                        date.setText(year + "/" + (month+1) + "/" + dayOfMonth);
 
 
                     }
@@ -149,23 +162,7 @@ public class MakeDonations extends Fragment {
         });
 
 
-        final EditText time = (EditText) vv.findViewById(R.id.editTextTime);
 
-        time.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(final View v) {
-
-
-                TimePickerDialog d = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
-                    @Override
-                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-                        time.setText(hourOfDay + ":" + minute);
-                    }
-                }, 12, 0, false);
-
-                d.show();
-            }
-        });
 
         Button confirm = (Button) vv.findViewById(R.id.confirmButton);
         confirm.setOnClickListener(new View.OnClickListener() {
@@ -173,6 +170,7 @@ public class MakeDonations extends Fragment {
             public void onClick(View v) {
 
                 if(donationType.getSelectedItem().toString().equals("Blood Cells")){
+
 
 
 
@@ -190,7 +188,9 @@ public class MakeDonations extends Fragment {
                         req.put("donationdestination","bank");
                         req.put("donorCivilid",profile.getString("civilId"));
                         req.put("status","pending");
-                        System.out.println(req.toString());
+
+                        if(!req.getString("ddate").equals("")){
+                            System.out.println(req.toString());
                         final JsonObjectRequest Jr = new JsonObjectRequest(Request.Method.POST, "http://34.196.107.188:8081/MhealthWeb/webresources/donationrecord", req, new Response.Listener<JSONObject>() {
                             @Override
                             public void onResponse(JSONObject response) {
@@ -204,6 +204,9 @@ public class MakeDonations extends Fragment {
                             }
                         });
                         queue.add(Jr);
+                        }else{
+                            Toast.makeText(getActivity(), "Error", Toast.LENGTH_SHORT).show();
+                        }
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
@@ -228,28 +231,35 @@ public class MakeDonations extends Fragment {
                         req.put("isActive",1);
                         req.put("isPast",0);
                         req.put("isRegisteredUser",1);
-                        req.put("period",1);
+                        req.put("period",peroids.getSelectedItemPosition());
+
 
                         SharedPreferences preferences = getActivity().getSharedPreferences(Filee, getActivity().MODE_PRIVATE);
                         final String p = preferences.getString(profile, "notfound");
                         JSONObject profile = new JSONObject(p);
-                        req.put("regUserId",profile.getString("civilId"));
+                        req.put("regUserId",profile.getString("donorId"));
                         req.put("siteUserId",0);
                         System.out.println(req.toString());
-                        final JsonObjectRequest Jr = new JsonObjectRequest(Request.Method.POST, "http://34.196.107.188:8081/MhealthWeb/webresources/schedule", req, new Response.Listener<JSONObject>() {
-                            @Override
-                            public void onResponse(JSONObject response) {
-
-                                Toast.makeText(getActivity(), "Done", Toast.LENGTH_SHORT).show();
-
-                            }
-                        }, new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(getActivity(), "Done", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                        queue.add(Jr);
+//                        if(!req.getString("day").equals("") && !req.getString("branchId").equals("")){
+//
+//                        final JsonObjectRequest Jr = new JsonObjectRequest(Request.Method.POST, "http://34.196.107.188:8081/MhealthWeb/webresources/schedule", req, new Response.Listener<JSONObject>() {
+//                            @Override
+//                            public void onResponse(JSONObject response) {
+//
+//                                Toast.makeText(getActivity(), "Done", Toast.LENGTH_SHORT).show();
+//
+//                            }
+//                        }, new Response.ErrorListener() {
+//                            @Override
+//                            public void onErrorResponse(VolleyError error) {
+//                                Toast.makeText(getActivity(), "Done", Toast.LENGTH_SHORT).show();
+//                            }
+//                        });
+//                        queue.add(Jr);
+//                        }
+//                        else{
+//                            Toast.makeText(getActivity(), "Error", Toast.LENGTH_SHORT).show();
+//                        }
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

@@ -35,6 +35,7 @@ public class Register2Activity extends AppCompatActivity {
 
                 final RequestQueue queue = Connection.getInstance().getRequestQueue(Register2Activity.this);
                 try {
+                    boolean flag = false;
                     JSONObject profile = new JSONObject();
                     profile.put("email", getIntent().getStringExtra("email"));
                     profile.put("password", getIntent().getStringExtra("password"));
@@ -56,30 +57,41 @@ public class Register2Activity extends AppCompatActivity {
                     profile.put("birthDate", "2017-01-01T00:00:00Z");
                     profile.put("bloodType", "O");
 
+                    if(profile.getString("email").equals("")||profile.getString("password").equals("")||
+                    profile.getString("firstName").equals("")|| profile.getString("lastName").equals("")||
+                    profile.getString("gender").equals("")|| profile.getString("civilId").equals("")||
+                    profile.getString("phoneNumber").equals("")
+                    ){
+                        flag =true;
+                    }
 
-                    Toast.makeText(Register2Activity.this, profile.toString(), Toast.LENGTH_SHORT).show();
-                    System.out.println(profile.toString());
-                    final JsonObjectRequest Jr = new JsonObjectRequest(Request.Method.POST, url, profile, new Response.Listener<JSONObject>() {
-                        @Override
-                        public void onResponse(JSONObject response) {
-                            try {
-                                if (!response.getString("errorMsgEn").equals("Error")) {
-                                    Toast.makeText(Register2Activity.this, response.toString(), Toast.LENGTH_SHORT).show();
 
+                    if(flag == true) {
+                        final JsonObjectRequest Jr = new JsonObjectRequest(Request.Method.POST, url, profile, new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+                                try {
+                                    if (!response.getString("errorMsgEn").equals("Error")) {
+                                        Toast.makeText(Register2Activity.this, response.toString(), Toast.LENGTH_SHORT).show();
+
+                                    }
+
+
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
                                 }
-
-
-                            } catch (JSONException e) {
-                                e.printStackTrace();
                             }
-                        }
-                    }, new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-
-                        }
-                    });
-                    queue.add(Jr);
+                        }, new Response.ErrorListener() {
+                            @Override
+                            public void onErrorResponse(VolleyError error) {
+                                Toast.makeText(Register2Activity.this, "error", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                        queue.add(Jr);
+                    }
+                    else{
+                        Toast.makeText(Register2Activity.this, "Some fields are missing", Toast.LENGTH_SHORT).show();
+                    }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

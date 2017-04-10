@@ -137,7 +137,6 @@ public class ProfileActivity extends AppCompatActivity {
 
 
                         String url="http://34.196.107.188:8081/MhealthWeb/webresources/donor/"+myprofile.getString("donorId");
-                        Toast.makeText(ProfileActivity.this, req.toString(), Toast.LENGTH_SHORT).show();
                         System.out.println(req.toString());
                         final JsonObjectRequest Jr = new JsonObjectRequest(Request.Method.PUT, url, req, new Response.Listener<JSONObject>() {
                             @Override

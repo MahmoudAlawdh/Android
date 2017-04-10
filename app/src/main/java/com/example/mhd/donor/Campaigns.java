@@ -80,7 +80,7 @@ public class Campaigns extends Fragment {
 
                             model.add(new CampaignModel(o.getInt("CFDId"),o.getString("name"),startd,endd,o.getString("locationName"),
                                     o.getString("LLat"),o.getString("LLong"),o.getString("bloodTypes")));
-                            Toast.makeText(getContext(), o.getString("status"), Toast.LENGTH_SHORT).show();
+
                             myv.notifyDataSetChanged();
                         }
                     }

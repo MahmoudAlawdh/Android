@@ -85,6 +85,42 @@ public class MyDonations extends Fragment {
 
             }
         });
+
+        url="http://34.196.107.188:8081/MhealthWeb/webresources/schedule";
+        final StringRequest jr=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONArray a = new JSONArray(response);
+                    SharedPreferences preferences = getActivity().getSharedPreferences(Filee, getActivity().MODE_PRIVATE);
+                    final String p = preferences.getString(profile, "notfound");
+                    JSONObject profile = new JSONObject(p);
+                    for(int i = 0 ; i < a.length() ; i++){
+                        JSONObject o = a.getJSONObject(i);
+
+
+                        String civilId = profile.getString("civilId");
+
+                        System.out.println(o.toString());
+                        if( o.getInt("isPast") == 1 && o.getInt("regUserId") == profile.getInt("donorId"))  {
+                            model.add(new MyAppointmentModel(o.getInt("id"), o.getInt("regUserId"), fixdate(o.getString("day")), "Platers", profile.getString("bloodType")));
+                            myv.notifyDataSetChanged();
+                        }
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+        queue.add(jr);
         queue.add(stringRequest);
 
 

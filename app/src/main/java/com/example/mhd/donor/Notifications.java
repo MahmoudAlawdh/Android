@@ -64,7 +64,7 @@ public class Notifications extends Fragment {
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
-                    Toast.makeText(getContext(), "asdasd", Toast.LENGTH_SHORT).show();
+
                 }
 
             }

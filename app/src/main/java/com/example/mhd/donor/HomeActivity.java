@@ -86,7 +86,6 @@ public class HomeActivity extends AppCompatActivity {
 
         SharedPreferences preferences=getSharedPreferences(Filee,MODE_PRIVATE);
         String p=preferences.getString(profile,"notfound");
-        Toast.makeText(this, p, Toast.LENGTH_SHORT).show();
         JSONObject myprofile = new JSONObject(p);
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
@@ -119,52 +118,49 @@ public class HomeActivity extends AppCompatActivity {
                     case 1:
                         fm.beginTransaction()
                                 .replace(R.id.Layout,f.getMakeDonations()).commit();
-                        Toast.makeText(c, "Make Donation", Toast.LENGTH_SHORT).show();
                         break;
                     case 2:
                         fm.beginTransaction()
                                 .replace(R.id.Layout,f.getMyAppointments()).commit();
-                        Toast.makeText(c, "My appointments", Toast.LENGTH_SHORT).show();
                         break;
                     case 3:
                         fm.beginTransaction()
                                 .replace(R.id.Layout,f.getNotifications()).commit();
-                        Toast.makeText(c, "Notifications", Toast.LENGTH_SHORT).show();
+
                         break;
                     case 4:
                         fm.beginTransaction()
                                 .replace(R.id.Layout,f.getCampaigns()).commit();
-                        Toast.makeText(c, "Campaigns", Toast.LENGTH_SHORT).show();
+
                         break;
                     case 5:
                         fm.beginTransaction()
                                 .replace(R.id.Layout,f.getMyDonations()).commit();
-                        Toast.makeText(c, "My Donations", Toast.LENGTH_SHORT).show();
                         break;
                     case 6:
                         fm.beginTransaction()
                                 .replace(R.id.Layout,f.getShare()).commit();
-                        Toast.makeText(c ,"Share", Toast.LENGTH_SHORT).show();
+
                         break;
                     case 7:
                         fm.beginTransaction()
                                 .replace(R.id.Layout,f.getStaticInfo()).commit();
-                        Toast.makeText(c, "static info", Toast.LENGTH_SHORT).show();
+
                         break;
                     case 8:
                         fm.beginTransaction()
                                 .replace(R.id.Layout,f.getAboutUs()).commit();
-                        Toast.makeText(c, "About us", Toast.LENGTH_SHORT).show();
+
                         break;
                     case 9:
                         fm.beginTransaction()
                                 .replace(R.id.Layout,f.getSettings()).commit();
-                        Toast.makeText(c, "Settings", Toast.LENGTH_SHORT).show();
+
                         break;
                     case 10:
                         Intent i = new Intent(HomeActivity.this,LoginActivity.class);
                         startActivity(i);
-                        Toast.makeText(c, "Logout", Toast.LENGTH_SHORT).show();
+
                         break;
                 }
 

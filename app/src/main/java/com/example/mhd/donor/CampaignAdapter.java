@@ -67,7 +67,6 @@ public class CampaignAdapter extends BaseAdapter {
                 String appLink = m.getName();
                 Massgeshare.putExtra(Intent.EXTRA_TEXT,"am Sharing the campaign :"+appLink);
                 v.getContext().startActivity(Intent.createChooser(Massgeshare,"Share Via"));
-                Toast.makeText(v.getContext(), "asdf", Toast.LENGTH_SHORT).show();
             }
         });
 

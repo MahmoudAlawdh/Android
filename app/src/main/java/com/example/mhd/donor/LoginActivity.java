@@ -62,31 +62,35 @@ public class LoginActivity extends AppCompatActivity {
                         public void onResponse(JSONObject response) {
                             try {
                                 if(!response.getString("errorMsgEn").equals("Error")){
-
                                     String s = response.getJSONObject("items").toString();
+                                    JSONObject dp = new JSONObject(s);
+                                    Toast.makeText(LoginActivity.this, "Welcome "+ dp.getString("firstName") +" "+dp.getString("lastName") , Toast.LENGTH_SHORT).show();
                                     SharedPreferences preferences=getSharedPreferences(Filee,MODE_PRIVATE);
                                     SharedPreferences.Editor editor=preferences.edit();
                                     editor.putString(profile,s);
                                     editor.commit();
                                     Intent i = new Intent(LoginActivity.this,HomeActivity.class);
                                     startActivity(i);
+                                }else{
+                                    Toast.makeText(LoginActivity.this, R.string.wrongemailpass, Toast.LENGTH_SHORT).show();
                                 }
-
-
                             } catch (JSONException e) {
                                 e.printStackTrace();
+                                Toast.makeText(LoginActivity.this, R.string.noemailpass, Toast.LENGTH_SHORT).show();
                             }
                         }
                     }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
 
+                            Toast.makeText(LoginActivity.this, R.string.wrongemailpass, Toast.LENGTH_SHORT).show();
                         }
                     });
                     queue.add(Jr);
 
                 } catch (JSONException e) {
                     e.printStackTrace();
+                    Toast.makeText(LoginActivity.this, R.string.noemailpass, Toast.LENGTH_SHORT).show();
                 }
 
             }
