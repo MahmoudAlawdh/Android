@@ -79,12 +79,10 @@
         android:id="@+id/imageView9"
         android:layout_width="10dp"
         android:layout_height="10dp"
+        app:srcCompat="@mipmap/calnderr"
         android:layout_above="@+id/StartDate"
-        android:layout_marginLeft="82dp"
-        android:layout_marginStart="82dp"
-        android:layout_toEndOf="@+id/Name"
-        android:layout_toRightOf="@+id/Name"
-        app:srcCompat="@mipmap/calnderr" />
+        android:layout_alignLeft="@+id/EndDate"
+        android:layout_alignStart="@+id/EndDate" />
 
     <TextView
         android:id="@+id/textView18"
@@ -103,12 +101,15 @@
         android:id="@+id/EndDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView18"
-        android:layout_alignStart="@+id/textView18"
-        android:layout_alignTop="@+id/StartDate"
         android:text="Feb 25, 2017"
         android:textColor="@color/md_black_1000"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:layout_marginRight="34dp"
+        android:layout_marginEnd="34dp"
+        android:layout_alignBaseline="@+id/StartDate"
+        android:layout_alignBottom="@+id/StartDate"
+        android:layout_toLeftOf="@+id/campaignShare"
+        android:layout_toStartOf="@+id/campaignShare" />
 
     <ImageView
         android:id="@+id/campaignShare"
