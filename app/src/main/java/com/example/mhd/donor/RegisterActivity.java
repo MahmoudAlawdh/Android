@@ -73,20 +73,6 @@ public class RegisterActivity extends AppCompatActivity {
                 i.putExtra("bloodType",((EditText)findViewById(R.id.editText3)).getText().toString());
             }
         });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

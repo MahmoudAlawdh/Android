@@ -28,8 +28,6 @@ public class Settings extends Fragment {
     public Settings() {
         // Required empty public constructor
     }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -51,12 +49,8 @@ public class Settings extends Fragment {
                 resEnglish.updateConfiguration(conf, dm);
                 Intent refresh = new Intent(getActivity(),HomeActivity.class);
                 startActivity(refresh);
-
-
-
             }
         });
-
         arabic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

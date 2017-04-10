@@ -26,8 +26,6 @@ public class ForgetPassActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forget_pass);
-
-
         Button b = (Button) findViewById(R.id.button3);
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,31 +40,38 @@ public class ForgetPassActivity extends AppCompatActivity {
                         req.put("username",editText.getText().toString());
                         req.put("civilid",civil.getText().toString());
 
-                        final JsonObjectRequest Jr = new JsonObjectRequest(Request.Method.POST, "http://34.196.107.188:8081/MhealthWeb/webresources/donor/reset/", req, new Response.Listener<JSONObject>() {
-                            @Override
-                            public void onResponse(JSONObject response) {
-                                Toast.makeText(ForgetPassActivity.this, "password channged", Toast.LENGTH_SHORT).show();
-                            }
-                        }, new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(ForgetPassActivity.this, "Error", Toast.LENGTH_SHORT).show();
-                            }
-                        });
+                        final JsonObjectRequest Jr = new JsonObjectRequest(Request.Method.POST, "http://34.196.107.188:8081/MhealthWeb/webresources/donor/reset/", req,response(), error());
                         queue.add(Jr);
 
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-
                 }
                 else {
                     Toast.makeText(ForgetPassActivity.this, R.string.wrongemail, Toast.LENGTH_SHORT).show();
                 }
             }
         });
-
-
-
     }
+
+
+    public Response.ErrorListener error(){
+        return new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(ForgetPassActivity.this, "Error", Toast.LENGTH_SHORT).show();
+            }
+        };
+    }
+
+    
+    public Response.Listener<JSONObject> response(){
+        return  new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                Toast.makeText(ForgetPassActivity.this, "password channged", Toast.LENGTH_SHORT).show();
+            }
+        };
+    }
+
 }

@@ -20,7 +20,6 @@ public class AboutUs extends Fragment {
 Button donateGo;
     public AboutUs() {
 
-        // Required empty public constructor
     }
 
 

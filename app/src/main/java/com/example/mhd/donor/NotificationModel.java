@@ -18,9 +18,6 @@ public class NotificationModel {
         this.setStatus(status);
         this.setTitle(title);
     }
-
-
-
     public String getDate() {
         return date;
     }

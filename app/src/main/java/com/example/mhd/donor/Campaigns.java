@@ -51,56 +51,10 @@ public class Campaigns extends Fragment {
         final ArrayList<CampaignModel> model= new ArrayList<>();
         final CampaignAdapter myv = new CampaignAdapter(model,getActivity());
         lv.setAdapter(myv);
-        //   llate = 29.3640416;
-        // llong = 47.9814006;
         String url="http://34.196.107.188:8081/MhealthWeb/webresources/callfordonation";
-
         final RequestQueue queue= Connection.getInstance().getRequestQueue(getContext());
-
-        final StringRequest stringRequest=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                try {
-                    JSONArray a = new JSONArray(response);
-                    for(int i = 0 ; i < a.length() ; i++){
-                        JSONObject o = a.getJSONObject(i);
-                        if( o.getString("status").toLowerCase().equals("active") ){
-
-                            String startd = fixdate(o.getString("startdate"));
-                            String endd = fixdate(o.getString("enddate"));
-
-
-
-
-
-
-
-
-
-
-                            model.add(new CampaignModel(o.getInt("CFDId"),o.getString("name"),startd,endd,o.getString("locationName"),
-                                    o.getString("LLat"),o.getString("LLong"),o.getString("bloodTypes")));
-
-                            myv.notifyDataSetChanged();
-                        }
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
-        });
+        final StringRequest stringRequest=new StringRequest(Request.Method.GET, url,response(model,myv),error());
         queue.add(stringRequest);
-
-
-
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -115,10 +69,42 @@ public class Campaigns extends Fragment {
                 startActivity(i);
             }
         });
-
-
-
         return v;
+    }
+
+    public Response.ErrorListener error(){
+        return  new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        };
+    }
+    public Response.Listener<String> response(final ArrayList<CampaignModel> model, final CampaignAdapter myv){
+        return new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    JSONArray a = new JSONArray(response);
+                    for(int i = 0 ; i < a.length() ; i++){
+                        JSONObject o = a.getJSONObject(i);
+                        if( o.getString("status").toLowerCase().equals("active") ){
+
+                            String startd = fixdate(o.getString("startdate"));
+                            String endd = fixdate(o.getString("enddate"));
+                            model.add(new CampaignModel(o.getInt("CFDId"),o.getString("name"),startd,endd,o.getString("locationName"),
+                                    o.getString("LLat"),o.getString("LLong"),o.getString("bloodTypes")));
+                            myv.notifyDataSetChanged();
+                        }
+                    }
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        };
     }
 
     public String fixdate(String date) throws ParseException {
@@ -127,12 +113,10 @@ public class Campaigns extends Fragment {
         Date d = null;
         try {
             d = format.parse(date);
-            //"EEE, MMM d, ''yy"
 
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
         return fmtOut.format(d);
     }
 

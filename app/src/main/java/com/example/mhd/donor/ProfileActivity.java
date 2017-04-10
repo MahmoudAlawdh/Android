@@ -34,12 +34,9 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
-
         SharedPreferences preferences = getSharedPreferences(Filee, MODE_PRIVATE);
         final String p = preferences.getString(profile, "notfound");
         Toast.makeText(this, p, Toast.LENGTH_SHORT).show();
-
         final EditText textname = (EditText) findViewById(R.id.textName);
         final EditText textemail = (EditText) findViewById(R.id.textEmail);
         final EditText textCivil = (EditText) findViewById(R.id.textCivil);
@@ -66,8 +63,6 @@ public class ProfileActivity extends AppCompatActivity {
             } else {
                 radioMale.setChecked(true);
             }
-
-
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -93,11 +88,6 @@ public class ProfileActivity extends AppCompatActivity {
                     lock = !lock;
                 } else {
                     editbutton.setText("EDIT PROFILE");
-
-
-
-
-
                     final RequestQueue queue= Connection.getInstance().getRequestQueue(ProfileActivity.this);
                     try {
 
@@ -120,22 +110,6 @@ public class ProfileActivity extends AppCompatActivity {
                         }
                         req.put("deleted",0);
                         req.put("status",true);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         String url="http://34.196.107.188:8081/MhealthWeb/webresources/donor/"+myprofile.getString("donorId");
                         System.out.println(req.toString());
                         final JsonObjectRequest Jr = new JsonObjectRequest(Request.Method.PUT, url, req, new Response.Listener<JSONObject>() {

@@ -45,11 +45,17 @@ public class AfterDonation extends AppCompatActivity {
         });
 
     }
+
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         this.finish();
         return super.onOptionsItemSelected(item);
     }
+
+
+
     private class CustomAdapterAfter extends FragmentPagerAdapter {
 
         private String AfterDonation[]= {"After Donation", "Continue....", "Continue..."};

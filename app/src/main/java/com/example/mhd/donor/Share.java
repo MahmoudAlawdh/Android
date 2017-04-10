@@ -16,24 +16,14 @@ import android.widget.Toast;
  * A simple {@link Fragment} subclass.
  */
 public class Share extends Fragment {
-
-
     ImageView twitter;
-
-
     ImageView whatsapp;
     ImageView Massge;
-
-
-
     Intent whatsappshare;
     Intent Massgeshare;
-
     public Share() {
         // Required empty public constructor
     }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -49,10 +39,6 @@ public class Share extends Fragment {
 
             }
         });
-
-
-
-
         whatsapp = (ImageView) v.findViewById(R.id.imageViewwhatsapp);
         whatsapp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,9 +68,5 @@ public class Share extends Fragment {
             }
         });
         return v;
-
-
-
     }
-
 }

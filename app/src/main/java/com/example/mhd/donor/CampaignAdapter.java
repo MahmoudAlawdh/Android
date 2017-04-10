@@ -49,15 +49,22 @@ public class CampaignAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
         View v = inflater.inflate(R.layout.list_item_campaign,null);
+        setup(v,position);
+        return v;
+    }
 
 
+    public void setup(View v,int position){
         TextView Name = (TextView) v.findViewById(R.id.Name);
         TextView StartDate = (TextView)v.findViewById(R.id.StartDate);
         TextView EndDate = (TextView)v.findViewById(R.id.EndDate);
         ImageView share = (ImageView)v.findViewById(R.id.campaignShare);
         final CampaignModel m = model.get(position);
+        Name.setText(" "+m.getName());
+        StartDate.setText(" "+m.getStartDate());
+        EndDate.setText(" "+m.getEndDate());
+
         share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,15 +77,5 @@ public class CampaignAdapter extends BaseAdapter {
             }
         });
 
-
-        Name.setText(" "+m.getName());
-
-        StartDate.setText(" "+m.getStartDate());
-
-        EndDate.setText(" "+m.getEndDate());
-
-
-
-        return v;
     }
 }

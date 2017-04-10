@@ -18,7 +18,6 @@ public class AFragment extends Fragment {
 
 
     public AFragment() {
-        // Required empty public constructor
     }
 
 
@@ -27,17 +26,6 @@ public class AFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View v=inflater.inflate(R.layout.activity_main, container, false);
-
-
-
-
-        
-
-
-
-
-
-
 
         return v;
     }

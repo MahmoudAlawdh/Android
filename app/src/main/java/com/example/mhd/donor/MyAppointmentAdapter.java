@@ -67,17 +67,10 @@ public class MyAppointmentAdapter extends BaseAdapter {
                 v.getContext().startActivity(Intent.createChooser(Massgeshare,"Share Via"));
             }
         });
-
-
-
         Date.setText(" "+m.getDDate());
         Bloodtype.setText(" "+m.getDnBloodType());
 
         Destination.setText(""+m.getDonationDestination());
-
-
-
-
         return v;
     }
 }
