@@ -53,19 +53,6 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <EditText
-        android:id="@+id/editTextTime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@mipmap/clock"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="@string/selectTime"
-        android:inputType="time"
-        android:layout_above="@+id/confirmButton"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
     <Button
         android:id="@+id/confirmButton"
         android:layout_width="match_parent"
@@ -146,5 +133,14 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         app:srcCompat="@mipmap/donationablooooood" />
+
+    <Spinner
+        android:id="@+id/spinnerperiod"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinnerBranches"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp" />
 
 </RelativeLayout>

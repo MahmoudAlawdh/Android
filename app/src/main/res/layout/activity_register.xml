@@ -60,11 +60,11 @@
         android:layout_alignRight="@+id/editText3"
         android:layout_alignStart="@+id/editText3"
         android:layout_below="@+id/editText3"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:text="Password"
         android:drawableLeft="@mipmap/padlock"
         android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
         android:textColor="@color/common_google_signin_btn_text_dark_disabled" />
 
     <TextView

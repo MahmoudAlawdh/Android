@@ -64,14 +64,26 @@
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="87dp"
         android:background="@drawable/button_shap"
         android:text="@string/send"
         android:textSize="8pt"
-        android:layout_marginLeft="80dp"
-        android:layout_marginRight="80dp"
-        />
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/civilIDEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="19dp"
+        android:background="@drawable/border_edit"
+        android:ems="10"
+        android:hint="Enter Your CivilID"
+        android:inputType="textPersonName" />
 
 </RelativeLayout>
