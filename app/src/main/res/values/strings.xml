@@ -180,7 +180,7 @@ Asima Blood Bank branch</string>
 <string name="gender">Gender</string>
 <string name="submit">Submit</string>
 <string name="signup">Sign Up</string>
-    <string name="enterEmail">Enter YOur Email</string>
+    <string name="enterEmail">Enter Your Email</string>
     <string name="password">Password</string>
     <string name="bloodtype">Choose Your Blood Type:</string>
     <string name="next">NEXT</string>
@@ -189,4 +189,14 @@ Asima Blood Bank branch</string>
     <string name="enteryouremail">Please enter your email here</string>
     <string name="send">Send</string>
 
+
+
+
+
+
+
+<string name="wrongemailpass">Email or password is wrong</string>
+<string name="noemailpass">No Email or  password given</string>
+<string name="wrongemail">Email is wrong</string>
+<string name="emailissent">Email is sent</string>
 </resources>
