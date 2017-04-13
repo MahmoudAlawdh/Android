@@ -25,117 +25,117 @@
     <EditText
         android:id="@+id/textName"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@mipmap/user11"
-        android:singleLine="true"
-        android:text="Mahmoud"
-        android:enabled="false"
-        android:fontFamily="serif"
-        android:drawablePadding="10dp"
+        android:layout_height="40dp"
         android:layout_above="@+id/textEmail"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:drawableLeft="@mipmap/user11"
+        android:drawablePadding="10dp"
+        android:enabled="false"
+        android:fontFamily="serif"
+        android:singleLine="true"
+        android:text="Mahmoud" />
 
     <EditText
-        android:fontFamily="serif"
         android:id="@+id/textCivil"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@mipmap/idcards"
-        android:drawablePadding="10dp"
-        android:singleLine="true"
-        android:text="29123638453"
-        android:enabled="false"
+        android:layout_height="40dp"
         android:layout_above="@+id/textPassword"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:drawableLeft="@mipmap/idcards"
+        android:drawablePadding="10dp"
+        android:enabled="false"
+        android:fontFamily="serif"
+        android:singleLine="true"
+        android:text="29123638453" />
 
     <EditText
-        android:fontFamily="serif"
         android:id="@+id/textEmail"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@mipmap/closeeenvelope"
-        android:drawablePadding="10dp"
-        android:singleLine="true"
-        android:text="Mahomud@example.com"
-        android:enabled="false"
+        android:layout_height="40dp"
         android:layout_above="@+id/textCivil"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:drawableLeft="@mipmap/closeeenvelope"
+        android:drawablePadding="10dp"
+        android:enabled="false"
+        android:fontFamily="serif"
+        android:singleLine="true"
+        android:text="Mahomud@example.com" />
 
     <EditText
-        android:fontFamily="serif"
         android:id="@+id/textPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@mipmap/padlock"
-        android:drawablePadding="10dp"
-        android:singleLine="true"
-        android:text="**************"
-        android:enabled="false"
+        android:layout_height="40dp"
         android:layout_above="@+id/textBirthDate"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:drawableLeft="@mipmap/padlock"
+        android:drawablePadding="10dp"
+        android:enabled="false"
+        android:fontFamily="serif"
+        android:singleLine="true"
+        android:text="**************" />
 
     <EditText
-        android:fontFamily="serif"
         android:id="@+id/textNationalty"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@mipmap/passportsymbol"
-        android:drawablePadding="10dp"
-        android:singleLine="true"
-        android:text="Kuwaiti"
-        android:enabled="false"
+        android:layout_height="40dp"
         android:layout_above="@+id/radioSex"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="37dp" />
+        android:layout_marginBottom="37dp"
+        android:drawableLeft="@mipmap/passportsymbol"
+        android:drawablePadding="10dp"
+        android:enabled="false"
+        android:fontFamily="serif"
+        android:singleLine="true"
+        android:text="Kuwaiti" />
 
     <EditText
-        android:fontFamily="serif"
         android:id="@+id/textBirthDate"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@mipmap/calnderr"
-        android:drawablePadding="10dp"
-        android:singleLine="true"
-        android:text="5/7/1991"
-        android:enabled="false"
+        android:layout_height="40dp"
         android:layout_above="@+id/textNationalty"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:drawableLeft="@mipmap/calnderr"
+        android:drawablePadding="10dp"
+        android:enabled="false"
+        android:fontFamily="serif"
+        android:singleLine="true"
+        android:text="5/7/1991" />
 
 
     <EditText
-        android:fontFamily="serif"
         android:id="@+id/textPhone"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@mipmap/phonerreceiver"
-        android:drawablePadding="10dp"
-        android:singleLine="true"
-        android:text="1888666"
-        android:enabled="false"
+        android:layout_height="40dp"
         android:layout_above="@+id/radioSex"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:drawableLeft="@mipmap/phonerreceiver"
+        android:drawablePadding="10dp"
+        android:enabled="false"
+        android:fontFamily="serif"
+        android:singleLine="true"
+        android:text="1888666" />
 
 
     <EditText
-        android:fontFamily="serif"
         android:id="@+id/textBlood"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableLeft="@mipmap/blood111111"
-        android:drawablePadding="10dp"
-        android:singleLine="true"
-        android:text="A+"
-        android:enabled="false"
+        android:layout_height="40dp"
         android:layout_above="@+id/editbutton"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:drawableLeft="@mipmap/blood111111"
+        android:drawablePadding="10dp"
+        android:enabled="false"
+        android:fontFamily="serif"
+        android:singleLine="true"
+        android:text="A+" />
 
     <Button
         android:id="@+id/editbutton"
@@ -153,14 +153,13 @@
     <RadioGroup
         android:id="@+id/radioSex"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_above="@+id/textBlood"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
 
         <RadioButton
-            android:fontFamily="serif"
             android:id="@+id/radioFemale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -171,14 +170,13 @@
             android:layout_toEndOf="@+id/radioMale"
             android:layout_toRightOf="@+id/radioMale"
             android:layout_weight="0.41"
-            android:enabled="false"
-            android:text="@string/radio_female"
             android:drawableLeft="@mipmap/businesswoman1"
             android:drawablePadding="10dp"
-            />
+            android:enabled="false"
+            android:fontFamily="serif"
+            android:text="@string/radio_female" />
 
         <RadioButton
-            android:fontFamily="serif"
             android:id="@+id/radioMale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -193,7 +191,20 @@
             android:drawableLeft="@mipmap/businessman1"
             android:drawablePadding="10dp"
             android:enabled="false"
+            android:fontFamily="serif"
             android:text="@string/radio_male" />
     </RadioGroup>
+
+    <ImageView
+        android:id="@+id/profileimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar1"
+        app:srcCompat="@mipmap/ic_launcher" />
 
 </RelativeLayout>
