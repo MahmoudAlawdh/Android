@@ -2,30 +2,42 @@ package com.example.mhd.donor;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Base64;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
+
+import static com.example.mhd.donor.R.id.imageView;
+
 public class ProfileActivity extends AppCompatActivity {
 
-
+    static final int REQUEST_IMAGE_CAPTURE = 1;
     boolean lock=true;
     public final static String Filee ="donor";
     public final static String profile ="profile";
@@ -46,7 +58,7 @@ public class ProfileActivity extends AppCompatActivity {
         final EditText textNationalty = (EditText) findViewById(R.id.textNationalty);
         final RadioButton radioMale = (RadioButton) findViewById(R.id.radioMale);
         final RadioButton radioFmale = (RadioButton) findViewById(R.id.radioFemale);
-
+        ImageView profileimage = (ImageView)findViewById(R.id.profileimage);
         final EditText textPhone = (EditText) findViewById(R.id.textPhone);
         try {
             myprofile = new JSONObject(p);
@@ -58,6 +70,8 @@ public class ProfileActivity extends AppCompatActivity {
             textBirth.setText(myprofile.getString("birthDate"));
             textNationalty.setText(myprofile.getString("nationality"));
             textPhone.setText(myprofile.getString("phoneNumber"));
+            Picasso.with(ProfileActivity.this).load(myprofile.getString("imgURL")).into(profileimage);
+
             if (myprofile.getString("gender").equals("F")) {
                 radioFmale.setChecked(true);
             } else {
@@ -134,7 +148,117 @@ public class ProfileActivity extends AppCompatActivity {
                 }
             }
         });
+
+
+        profileimage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
+                    startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+                }
+
+            }
+        });
+
+
+
+
+
     }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            final Bitmap imageBitmap = (Bitmap) extras.get("data");
+            ImageView profileimage = (ImageView)findViewById(R.id.profileimage);
+            profileimage.setImageBitmap(imageBitmap);
+            final JSONObject req = new JSONObject();
+            try {
+
+                req.put("appID", "donor");
+                req.put("imgData", encodeToBase64(imageBitmap, Bitmap.CompressFormat.PNG    , 0 ));
+
+
+
+
+                final RequestQueue queue = Volley.newRequestQueue(ProfileActivity.this);
+                StringRequest Jr = new StringRequest(Request.Method.POST, "http://34.196.107.188:8081/MhealthWeb/addimg", new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        System.out.println(response);
+                            Toast.makeText(ProfileActivity.this, response, Toast.LENGTH_SHORT).show();
+                            try {
+                                JSONObject res = new JSONObject(response);
+                                updateprofile(res.getString("imgPath"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+
+
+                    }
+                }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        System.out.println(error.toString());
+                    }
+                }){
+                    @Override
+                    public byte[] getBody() throws AuthFailureError {
+                        String s = "appID=donor&imgData="+encodeToBase64(imageBitmap, Bitmap.CompressFormat.PNG, 0);
+
+                        return s.getBytes();
+                    }
+                };
+                queue.add(Jr);
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+
+        }
+    }
+    public void updateprofile(String url) throws JSONException {
+
+        myprofile.put("imgURL",url);
+        final RequestQueue queue = Volley.newRequestQueue(ProfileActivity.this);
+        String urll="http://34.196.107.188:8081/MhealthWeb/webresources/donor/"+myprofile.getString("donorId");
+
+        final JsonObjectRequest Jr = new JsonObjectRequest(Request.Method.PUT, urll, myprofile, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+
+                Toast.makeText(ProfileActivity.this, "Updated", Toast.LENGTH_SHORT).show();
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(ProfileActivity.this, "Error", Toast.LENGTH_SHORT).show();
+            }
+        });
+        queue.add(Jr);
+
+
+    }
+
+    public static String encodeToBase64(Bitmap image, Bitmap.CompressFormat compressFormat, int quality)
+    {
+        ByteArrayOutputStream byteArrayOS = new ByteArrayOutputStream();
+        image.compress(compressFormat, quality, byteArrayOS);
+        return Base64.encodeToString(byteArrayOS.toByteArray(), Base64.DEFAULT);
+    }
+
+
+
+
+
+
+
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         this.finish();
