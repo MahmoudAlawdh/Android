@@ -49,6 +49,7 @@ public class Settings extends Fragment {
                 resEnglish.updateConfiguration(conf, dm);
                 Intent refresh = new Intent(getActivity(),HomeActivity.class);
                 startActivity(refresh);
+                getActivity().finish();
             }
         });
         arabic.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +64,7 @@ public class Settings extends Fragment {
                 resArabic.updateConfiguration(conf1, dm1);
                 Intent refresh = new Intent(getActivity(),HomeActivity.class);
                 startActivity(refresh);
+                getActivity().finish();
             }
         });
 

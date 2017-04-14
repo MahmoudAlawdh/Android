@@ -26,6 +26,8 @@ import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import javax.security.auth.Destroyable;
+
 public class HomeActivity extends AppCompatActivity {
     final FragmentM f = FragmentM.getInstance();
     final FragmentManager fm=getSupportFragmentManager();
@@ -158,9 +160,10 @@ public class HomeActivity extends AppCompatActivity {
 
                         break;
                     case 10:
+
                         Intent i = new Intent(HomeActivity.this,LoginActivity.class);
                         startActivity(i);
-
+                        finish();
                         break;
                 }
 
