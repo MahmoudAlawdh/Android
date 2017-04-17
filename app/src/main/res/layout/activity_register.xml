@@ -40,32 +40,31 @@
         android:id="@+id/editText3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/textView14"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:fontFamily="serif"
-        android:inputType="textEmailAddress"
-        android:hint="@string/enterEmail"
-        android:textColor="@color/common_google_signin_btn_text_dark_disabled"
         android:drawableLeft="@mipmap/closeeenvelope"
         android:drawablePadding="10dp"
-        />
+        android:ems="10"
+        android:fontFamily="serif"
+        android:hint="@string/enterEmail"
+        android:inputType="textEmailAddress"
+        android:singleLine="false"
+        android:textColor="@color/common_google_signin_btn_text_dark_disabled" />
 
     <EditText
         android:id="@+id/editText4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/editText3"
-        android:layout_alignLeft="@+id/editText3"
-        android:layout_alignRight="@+id/editText3"
-        android:layout_alignStart="@+id/editText3"
-        android:layout_below="@+id/editText3"
         android:drawableLeft="@mipmap/padlock"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColor="@color/common_google_signin_btn_text_dark_disabled" />
+        android:textColor="@color/common_google_signin_btn_text_dark_disabled"
+        android:layout_above="@+id/textView15"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/textView15"
@@ -77,12 +76,9 @@
         android:textStyle="bold"
         android:textSize="9pt"
         android:textAlignment="center"
-        android:layout_marginRight="13dp"
-        android:layout_marginEnd="13dp"
-        android:layout_above="@+id/ABminus"
-        android:layout_toLeftOf="@+id/Aplus"
-        android:layout_toStartOf="@+id/Aplus"
-        android:layout_marginBottom="15dp" />
+        android:layout_above="@+id/bloodType"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:id="@+id/next"
@@ -92,92 +88,141 @@
         android:background="@drawable/button_shap"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="35dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginRight="80dp"/>
+        android:layout_alignParentStart="true" />
 
-    <ImageView
-        android:id="@+id/ABminus"
-        android:layout_width="90dp"
+    <RadioGroup
+        android:id="@+id/bloodType"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:background="@android:color/transparent"
-        android:backgroundTint="@color/common_google_signin_btn_text_dark_default"
-        app2:srcCompat="@mipmap/abb"
-        android:layout_above="@+id/Oplus"
-        android:layout_alignLeft="@+id/Oplus"
-        android:layout_alignStart="@+id/Oplus" />
-
-    <ImageView
-        android:id="@+id/Aminus"
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        app2:srcCompat="@mipmap/aa"
-        android:layout_below="@+id/textView15"
-        android:layout_toRightOf="@+id/ABplus"
-        android:layout_toEndOf="@+id/ABplus" />
-
-    <ImageView
-        android:id="@+id/Bplus"
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        app2:srcCompat="@mipmap/b"
-        android:layout_below="@+id/Aminus"
-        android:layout_alignLeft="@+id/Aplus"
-        android:layout_alignStart="@+id/Aplus" />
-
-    <ImageView
-        android:id="@+id/Bminus"
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-
-        android:layout_below="@+id/Aminus"
-        android:layout_toEndOf="@+id/Ominus"
-        android:layout_toRightOf="@+id/Ominus"
-        android:background="@android:color/transparent"
-        app2:srcCompat="@mipmap/bb" />
-
-    <ImageView
-        android:id="@+id/Oplus"
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        app2:srcCompat="@mipmap/o"
         android:layout_above="@+id/next"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="17dp" />
+        android:layout_marginBottom="26dp">
+        <RadioButton
+            android:id="@+id/radioAplus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
 
-    <ImageView
-        android:id="@+id/Ominus"
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        app2:srcCompat="@mipmap/oo"
-        android:layout_below="@+id/ABminus"
-        android:layout_toRightOf="@+id/Oplus"
-        android:layout_toEndOf="@+id/Oplus" />
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:layout_weight="1"
+            android:enabled="true"
+            android:text="A+"
+            android:fontFamily="serif"
+            android:drawableLeft="@mipmap/blood111111"
+            android:drawablePadding="10dp"
+            />
 
-    <ImageView
-        android:id="@+id/ABplus"
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        app2:srcCompat="@mipmap/ab"
-        android:layout_below="@+id/textView15"
-        android:layout_toRightOf="@+id/Oplus"
-        android:layout_toEndOf="@+id/Oplus" />
+        <RadioButton
+            android:id="@+id/radioAminus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:fontFamily="serif"
+            android:drawableLeft="@mipmap/blood111111"
+            android:drawablePadding="10dp"
+            android:enabled="true"
+            android:text="A-" />
 
-    <ImageView
-        android:id="@+id/Aplus"
-        android:layout_width="90dp"
-        android:layout_height="wrap_content"
-        app2:srcCompat="@mipmap/a"
-        android:layout_above="@+id/Bplus"
-        android:layout_toRightOf="@+id/Aminus"
-        android:layout_toEndOf="@+id/Aminus" />
+        <RadioButton
+            android:id="@+id/radioABpluse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:fontFamily="serif"
+            android:drawableLeft="@mipmap/blood111111"
+            android:drawablePadding="10dp"
+            android:enabled="true"
+            android:text="AB+" />
+
+        <RadioButton
+            android:id="@+id/radioABminus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:fontFamily="serif"
+            android:drawableLeft="@mipmap/blood111111"
+            android:drawablePadding="10dp"
+            android:enabled="true"
+            android:text="AB-" />
+
+        <RadioButton
+            android:id="@+id/radioOpluse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:fontFamily="serif"
+            android:drawableLeft="@mipmap/blood111111"
+            android:drawablePadding="10dp"
+            android:enabled="true"
+            android:text="O+" />
+        <RadioButton
+            android:id="@+id/radioOminus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:fontFamily="serif"
+            android:drawableLeft="@mipmap/blood111111"
+            android:drawablePadding="10dp"
+            android:enabled="true"
+            android:text="O-" />
+
+        <RadioButton
+            android:id="@+id/radioBplus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:drawableLeft="@mipmap/blood111111"
+            android:drawablePadding="10dp"
+            android:enabled="true"
+            android:fontFamily="serif"
+            android:text="B+" />
+
+        <RadioButton
+            android:id="@+id/radioBminus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="23dp"
+            android:layout_marginStart="23dp"
+            android:layout_weight="1"
+            android:checked="true"
+            android:drawableLeft="@mipmap/blood111111"
+            android:drawablePadding="10dp"
+            android:enabled="true"
+            android:fontFamily="serif"
+            android:text="B-" />
+    </RadioGroup>
 
 </RelativeLayout>

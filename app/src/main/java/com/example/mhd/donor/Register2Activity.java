@@ -53,11 +53,10 @@ public class Register2Activity extends AppCompatActivity {
                     profile.put("phoneNumber", ((EditText) findViewById(R.id.phone)).getText().toString());
                     profile.put("status", true);
                     profile.put("birthDate", "2017-01-01T00:00:00Z");
-                    profile.put("bloodType", "O");
-                    if(profile.getString("email").equals("")||profile.getString("password").equals("")||
-                    profile.getString("firstName").equals("")|| profile.getString("lastName").equals("")||
-                    profile.getString("gender").equals("")|| profile.getString("civilId").equals("")||
-                    profile.getString("phoneNumber").equals("")
+                    profile.put("bloodType", getIntent().getStringExtra("bloodType"));
+
+                    if(true
+
                     ){
                         flag =true;
                     }
@@ -82,7 +81,7 @@ public class Register2Activity extends AppCompatActivity {
                         queue.add(Jr);
                     }
                     else{
-                        Toast.makeText(Register2Activity.this, "Some fields are missing", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Register2Activity.this, "Missing Fields", Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
