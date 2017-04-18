@@ -68,12 +68,20 @@ public class MyAppointments extends Fragment {
                         JSONObject o = a.getJSONObject(i);
 
 
+
                         String civilId = profile.getString("civilId");
 //                        System.out.println(profile.toString());
 
 
                         if( o.getString("status").toLowerCase().equals("pending")  && civilId.equals(o.getInt("donorCivilid")+"")    )  {
-                            model.add(new MyAppointmentModel(o.getInt("donationId"), o.getInt("donorCivilid"), fixdate(o.getString("ddate")), o.getString("donationdestination"), o.getString("dnbloodtype")));
+                            String dest = "";
+                            if(o.getString("donationdestination").contains("bank")){
+                                dest = "";
+                            }
+                            else{
+                                dest = o.getString("donationdestination");
+                            }
+                            model.add(new MyAppointmentModel(o.getInt("donationId"), o.getInt("donorCivilid"), fixdate(o.getString("ddate")), dest, o.getString("dnbloodtype")));
                             myv.notifyDataSetChanged();
                         }
                     }

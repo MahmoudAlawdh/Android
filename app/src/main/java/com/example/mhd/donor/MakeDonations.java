@@ -1,5 +1,6 @@
 package com.example.mhd.donor;
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -65,8 +67,10 @@ public class MakeDonations extends Fragment {
         final Spinner donationType = (Spinner) vv.findViewById(R.id.spinnerSelectDonationType);
         final Spinner peroids = (Spinner) vv.findViewById(R.id.spinnerperiod);
         final Spinner branchType = (Spinner) vv.findViewById(R.id.spinnerBranches);
-        final EditText date = (EditText) vv.findViewById(R.id.editTextDate);
+        final TextView date = (TextView) vv.findViewById(R.id.editTextDate);
         Button confirm = (Button) vv.findViewById(R.id.confirmButton);
+
+
 
         peroids.setAdapter(adaptersetup(new String[]{"8 AM - 10 AM", "10 AM - 12 PM", "12 PM - 2 PM", "2 PM - 4 PM"},"Select peroid"));
         donationType.setAdapter(adaptersetup(new String[]{"Blood Cells","Platelets"},"Select Donation Type"));
@@ -117,6 +121,7 @@ public class MakeDonations extends Fragment {
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
 
                 if(donationType.getSelectedItem().toString().equals("Blood Cells")){
                     try {
@@ -209,10 +214,19 @@ public class MakeDonations extends Fragment {
                     }
 
                 }
+                donationType.setSelection(0);
+                branchType.setSelection(0);
+                date.setText("");
+                peroids.setSelection(0);
+
             }
+
         });
         return vv;
     }
+
+
+
 }
 
 

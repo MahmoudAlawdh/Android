@@ -69,8 +69,7 @@ public class MyAppointmentAdapter extends BaseAdapter {
         });
         Date.setText(" "+m.getDDate());
         Bloodtype.setText(" "+m.getDnBloodType());
-
-        Destination.setText(""+m.getDonationDestination());
+            Destination.setText("" + m.getDonationDestination());
         return v;
     }
 }

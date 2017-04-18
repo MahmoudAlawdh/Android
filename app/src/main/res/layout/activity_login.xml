@@ -23,6 +23,7 @@
     <EditText
         android:fontFamily="serif"
         android:id="@+id/Emaillll"
+        android:maxLines="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/Password"
@@ -40,6 +41,7 @@
     <EditText
         android:fontFamily="serif"
         android:id="@+id/Password"
+        android:maxLines="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"

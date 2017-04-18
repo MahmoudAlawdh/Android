@@ -9,7 +9,7 @@ package com.example.mhd.donor;
  *
  */
 
-public class MyAppointmentModel {
+public class                             MyAppointmentModel {
 
     private int DonationId;
     private int DonorCivilId;

@@ -62,7 +62,8 @@ public class LoginActivity extends AppCompatActivity {
                         public void onResponse(JSONObject response) {
                             try {
                                 if(!response.getString("errorMsgEn").equals("Error")){
-                                    String s = response.getJSONObject("items").toString();
+
+                                   String s = response.getJSONObject("items").toString();
                                     JSONObject dp = new JSONObject(s);
                                     Toast.makeText(LoginActivity.this, "Welcome "+ dp.getString("firstName") +" "+dp.getString("lastName") , Toast.LENGTH_SHORT).show();
                                     SharedPreferences preferences=getSharedPreferences(Filee,MODE_PRIVATE);

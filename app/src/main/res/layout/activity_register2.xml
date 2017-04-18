@@ -23,6 +23,7 @@
 
     <EditText
         android:id="@+id/first_name"
+        android:maxLines="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -39,6 +40,7 @@
 
     <EditText
         android:id="@+id/last_name"
+        android:maxLines="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -55,6 +57,7 @@
 
     <EditText
         android:id="@+id/civil_id"
+        android:maxLines="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -72,6 +75,7 @@
 
     <EditText
         android:id="@+id/phone"
+        android:maxLines="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -86,8 +90,9 @@
         android:drawableLeft="@mipmap/phonerreceiver"
         />
 
-    <EditText
+    <TextView
         android:id="@+id/date_of_birth"
+        android:maxLines="1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"

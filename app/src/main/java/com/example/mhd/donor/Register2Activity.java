@@ -1,13 +1,16 @@
 package com.example.mhd.donor;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -20,13 +23,31 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Register2Activity extends AppCompatActivity {
-
+    String birthdate = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register2);
 
+        final TextView date = (TextView) findViewById(R.id.date_of_birth);
+        date.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatePickerDialog d = new DatePickerDialog(Register2Activity.this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        date.setText(year + "/" + (month+1) + "/" + dayOfMonth);
+                        birthdate = year+"-"+month+"-"+dayOfMonth+"T00:00:00Z";
+                        System.out.println(birthdate);
+                    }
+                }, 2017, 3, 30);
+                d.show();
+            }
+        });
+
         Button submit = (Button) findViewById(R.id.submit);
+
+
 
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +62,10 @@ public class Register2Activity extends AppCompatActivity {
                     profile.put("password", getIntent().getStringExtra("password"));
                     profile.put("firstName", ((EditText) findViewById(R.id.first_name)).getText().toString());
                     profile.put("lastName", ((EditText) findViewById(R.id.last_name)).getText().toString());
+                    String day[] = date.getText().toString().split("/");
+                    if(day[1].length() == 1){
+                        day[1] = 0+day[1];
+                    }
 
                     if (((RadioButton) findViewById(R.id.radioFemalere)).isChecked()) {
                         profile.put("gender", "F");
@@ -52,7 +77,7 @@ public class Register2Activity extends AppCompatActivity {
                     profile.put("civilId", ((EditText) findViewById(R.id.civil_id)).getText().toString());
                     profile.put("phoneNumber", ((EditText) findViewById(R.id.phone)).getText().toString());
                     profile.put("status", true);
-                    profile.put("birthDate", "2017-01-01T00:00:00Z");
+                    profile.put("birthDate",birthdate );
                     profile.put("bloodType", getIntent().getStringExtra("bloodType"));
 
                     if(true

@@ -48,7 +48,7 @@ public class ProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
         SharedPreferences preferences = getSharedPreferences(Filee, MODE_PRIVATE);
         final String p = preferences.getString(profile, "notfound");
-        Toast.makeText(this, p, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, p, Toast.LENGTH_SHORT).show();
         final EditText textname = (EditText) findViewById(R.id.textName);
         final EditText textemail = (EditText) findViewById(R.id.textEmail);
         final EditText textCivil = (EditText) findViewById(R.id.textCivil);

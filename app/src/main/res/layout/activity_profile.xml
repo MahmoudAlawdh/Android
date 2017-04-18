@@ -24,6 +24,7 @@
 
     <EditText
         android:id="@+id/textName"
+        android:maxLines="1"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_above="@+id/textEmail"
@@ -38,6 +39,7 @@
 
     <EditText
         android:id="@+id/textCivil"
+        android:maxLines="1"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_above="@+id/textPassword"
@@ -52,6 +54,7 @@
 
     <EditText
         android:id="@+id/textEmail"
+        android:maxLines="1"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_above="@+id/textCivil"
@@ -66,6 +69,7 @@
 
     <EditText
         android:id="@+id/textPassword"
+        android:maxLines="1"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_above="@+id/textBirthDate"
@@ -80,6 +84,7 @@
 
     <EditText
         android:id="@+id/textNationalty"
+        android:maxLines="1"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_above="@+id/radioSex"
@@ -95,6 +100,7 @@
 
     <EditText
         android:id="@+id/textBirthDate"
+        android:maxLines="1"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_above="@+id/textNationalty"
@@ -110,6 +116,7 @@
 
     <EditText
         android:id="@+id/textPhone"
+        android:maxLines="1"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_above="@+id/radioSex"
@@ -125,6 +132,7 @@
 
     <EditText
         android:id="@+id/textBlood"
+        android:maxLines="1"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_above="@+id/editbutton"
@@ -160,23 +168,6 @@
 
 
         <RadioButton
-            android:id="@+id/radioFemale"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/btnDisplay"
-            android:layout_alignBottom="@+id/btnDisplay"
-            android:layout_marginLeft="250dp"
-            android:layout_marginStart="25dp"
-            android:layout_toEndOf="@+id/radioMale"
-            android:layout_toRightOf="@+id/radioMale"
-            android:layout_weight="0.41"
-            android:drawableLeft="@mipmap/businesswoman1"
-            android:drawablePadding="10dp"
-            android:enabled="false"
-            android:fontFamily="serif"
-            android:text="@string/radio_female" />
-
-        <RadioButton
             android:id="@+id/radioMale"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -193,6 +184,23 @@
             android:enabled="false"
             android:fontFamily="serif"
             android:text="@string/radio_male" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btnDisplay"
+            android:layout_alignBottom="@+id/btnDisplay"
+            android:layout_marginLeft="250dp"
+            android:layout_marginStart="25dp"
+            android:layout_toEndOf="@+id/radioMale"
+            android:layout_toRightOf="@+id/radioMale"
+            android:layout_weight="0.41"
+            android:drawableLeft="@mipmap/businesswoman1"
+            android:drawablePadding="10dp"
+            android:enabled="false"
+            android:fontFamily="serif"
+            android:text="@string/radio_female" />
     </RadioGroup>
 
     <ImageView
