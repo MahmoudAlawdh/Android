@@ -67,7 +67,7 @@ public class MyDonations extends Fragment {
                     for(int i = 0 ; i < a.length() ; i++){
                         JSONObject o = a.getJSONObject(i);
                         String civilId = profile.getString("civilId");
-                        if( o.getString("status").toLowerCase().equals("accepted") &&  civilId.equals(o.getInt("donorCivilid")+"")) {
+                        if( o.getString("status").toLowerCase().equals("accepted") &&  civilId.equals(o.getString("donorCivilid"))) {
                             model.add(new MyAppointmentModel(o.getInt("donationId"), o.getInt("donorCivilid"), fixdate(o.getString("ddate")), o.getString("donationdestination"), o.getString("dnbloodtype")));
                             myv.notifyDataSetChanged();
                         }
@@ -98,7 +98,7 @@ public class MyDonations extends Fragment {
                         JSONObject o = a.getJSONObject(i);
                         String civilId = profile.getString("civilId");
                         System.out.println(o.toString());
-                        if( o.getInt("isPast") == 1 && o.getInt("regUserId") == profile.getInt("donorId"))  {
+                        if( o.getInt("isPast") == 1 && o.getInt("regUserId") == Integer.parseInt(profile.getString("donorId")))  {
                             model.add(new MyAppointmentModel(o.getInt("id"), o.getInt("regUserId"), fixdate(o.getString("day")), "Platers", profile.getString("bloodType")));
                             myv.notifyDataSetChanged();
                         }

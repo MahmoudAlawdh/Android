@@ -70,10 +70,10 @@ public class MyAppointments extends Fragment {
 
 
                         String civilId = profile.getString("civilId");
-//                        System.out.println(profile.toString());
 
 
-                        if( o.getString("status").toLowerCase().equals("pending")  && civilId.equals(o.getInt("donorCivilid")+"")    )  {
+
+                        if( o.getString("status").toLowerCase().equals("pending")  && civilId.equals(o.getString("donorCivilid"))    )  {
                             String dest = "";
                             if(o.getString("donationdestination").contains("bank")){
                                 dest = "";
