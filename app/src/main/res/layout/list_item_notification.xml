@@ -21,7 +21,8 @@
         android:text="TextView"
         android:layout_below="@+id/notificationShare"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp" />
 
     <TextView
         android:id="@+id/desc_noti11111"
@@ -30,7 +31,8 @@
         android:text="TextView"
         android:layout_below="@+id/date_noti111111"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
 
     <ImageView
         android:id="@+id/notificationShare"
