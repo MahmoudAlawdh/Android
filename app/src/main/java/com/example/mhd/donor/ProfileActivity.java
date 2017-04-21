@@ -70,7 +70,6 @@ public class ProfileActivity extends AppCompatActivity {
             textBirth.setText(myprofile.getString("birthDate"));
             textNationalty.setText(myprofile.getString("nationality"));
             textPhone.setText(myprofile.getString("phoneNumber"));
-            Picasso.with(ProfileActivity.this).load(myprofile.getString("imgURL")).into(profileimage);
 
             if (myprofile.getString("gender").equals("F")) {
                 radioFmale.setChecked(true);

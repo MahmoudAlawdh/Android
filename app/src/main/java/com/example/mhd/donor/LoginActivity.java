@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                                     Intent i = new Intent(LoginActivity.this,HomeActivity.class);
                                     startActivity(i);
                                 }else{
-                                    Toast.makeText(LoginActivity.this, R.string.wrongemailpass +"2", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this, R.string.wrongemailpass, Toast.LENGTH_SHORT).show();
                                 }
                             } catch (JSONException e) {
                                 e.printStackTrace();
