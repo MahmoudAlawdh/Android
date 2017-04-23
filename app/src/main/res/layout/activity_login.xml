@@ -61,13 +61,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="MHEALTH"
+        android:text="KHEALTH"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="50sp"
         android:textStyle="bold"
-        android:layout_marginTop="32dp"
-        android:layout_below="@+id/Hometoolbar"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginBottom="32dp"
+        android:layout_above="@+id/Emaillll"
+        android:layout_alignLeft="@+id/Login"
+        android:layout_alignStart="@+id/Login"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp" />
 
     <Button
         android:id="@+id/Login"
@@ -97,12 +100,12 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/donor"
-        android:layout_below="@+id/Hometoolbar"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@mipmap/bloodbank"
+        android:layout_alignTop="@+id/textView10"
+        android:layout_alignLeft="@+id/Emaillll"
+        android:layout_alignStart="@+id/Emaillll" />
 
     <TextView
         android:fontFamily="serif"

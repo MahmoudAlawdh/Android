@@ -132,7 +132,7 @@
         android:layout_alignBottom="@+id/spinnerSelectDonationType"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        app:srcCompat="@mipmap/donationablooooood" />
+        app:srcCompat="@mipmap/bloodbank" />
 
     <Spinner
         android:id="@+id/spinnerperiod"

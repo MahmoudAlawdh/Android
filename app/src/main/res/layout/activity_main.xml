@@ -29,7 +29,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="21dp"
         android:fontFamily="serif"
-        android:text="MHEALTH"
+        android:text="KHEALTH"
         android:textColor="@color/common_google_signin_btn_text_dark_focused"
         android:textSize="50sp"
         android:textStyle="bold" />
@@ -59,11 +59,10 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ddd"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:srcCompat="@mipmap/bloodbank"
         android:layout_above="@+id/Mhealth"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
