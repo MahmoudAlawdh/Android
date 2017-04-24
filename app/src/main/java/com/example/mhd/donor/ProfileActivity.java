@@ -67,7 +67,7 @@ public class ProfileActivity extends AppCompatActivity {
             textCivil.setText(myprofile.getString("civilId"));
             textPassword.setText(myprofile.getString("password"));
             textblood.setText(myprofile.getString("bloodType"));
-            textBirth.setText(myprofile.getString("birthDate"));
+            textBirth.setText(myprofile.getString("birthDate").split("T")[0]);
             textNationalty.setText(myprofile.getString("nationality"));
             textPhone.setText(myprofile.getString("phoneNumber"));
 
